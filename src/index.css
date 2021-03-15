@@ -16,3 +16,29 @@ code {
   margin-top: -100px;
   position: relative;
 }
+.nav{
+  padding: 0 40px 0 40px;
+
+}
+
+.logo{
+  font-weight: bold;
+  font-size: xx-large;
+  color:antiquewhite;
+  letter-spacing: 2px;
+  z-index: 100;
+  text-shadow: 4px 3px 3px rgba(2,2,2,0.66)
+  
+}
+
+ul li{
+  color: antiquewhite;
+  z-index: 100;
+  font-size: large;
+  font-weight: 500;
+  text-shadow: 4px 3px 3px rgba(2,2,2,0.66)
+}
+li a:hover{
+  text-decoration: underline;
+  
+}
