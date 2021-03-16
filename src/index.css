@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +7,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("Live-Background.svg");
+  background-repeat:no-repeat;
+ 
 }
 
 code {
@@ -42,3 +47,35 @@ li a:hover{
   text-decoration: underline;
   
 }
+.companyDetaile{
+  font-size: large;
+  font-weight: 500;
+}
+.descriprion{
+  padding: 20px 60px 50px 60px;
+  /* padding: 30px; */
+  margin: 20px 0 20px 0;
+}
+.detail{
+  background-color: rgb(255, 253, 253);
+  padding: 25px;
+
+}
+.btn{
+  background:#6D2FD9;
+  padding: 10px 35px 10px 35px;
+  border-radius: 10px;
+  font-size: 20px; 
+  text-shadow: 4px 3px 3px rgba(47, 47, 47, 0.66);
+  font-weight: 900;
+  box-shadow:4px 1px 3px rgba(47, 47, 47, 0.66);
+  color: rgb(255, 255, 255);
+}
+.singleJob{
+  padding-bottom: 90px;
+}
+
+
+
+
+
