@@ -4,12 +4,26 @@ import data from '../assets/data.json';
 import DisplayCompanyProfile from './DisplayCompanyProfile';
 import DisplaySingleJob from './DisplaySingleJob';
 import JobBoardComponent from './JobBoardComponent';
+import axios from 'axios';
 
 const DisplayAllJobs = () => {
   const [jobs, setJobs] = useState([]);
   const [filters, setFilters] =useState([]);
 
-  useEffect(() => setJobs(data), []);
+  // useEffect(() => setJobs(data), []);
+
+  useEffect(()=>{
+    axios.get("/api/jobs")
+      .then(function(response){
+        const dataResponse = response;
+        const data = dataResponse.data
+       
+        // console.log(data[0].id)
+        setJobs(data)
+      })
+  },[]);
+
+
 
   const filterFunction = ({role, level, tools, languages}) => {
     if (filters.length === 0) {

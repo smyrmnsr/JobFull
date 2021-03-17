@@ -18,7 +18,7 @@ function App() {
 
 
           <Route exact path='/' render={(props)=><DisplayAllJobs{...props}/>}/>
-          <Route exact path='/job:jobId' render={(props)=><DisplaySingleJob {...props}/>}/>
+          <Route exact path='/jobs/:jobId' render={(props)=><DisplaySingleJob {...props}/>}/>
           <Route exact path='/company:companyId' render={(props)=><DisplayCompanyProfile {...props}/>}/> 
           <Route exact path='/login' render={(props)=><Login {...props}/>}/>
       </div>

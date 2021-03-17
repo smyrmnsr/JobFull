@@ -1,4 +1,4 @@
-import react from 'react';
+
 import { Link } from 'react-router-dom';
 import DisplaySingleJob from './DisplaySingleJob';
 
@@ -37,7 +37,7 @@ const JobBoardComponent = ({
    
         className={`flex flex-col bg-white shadow-md my-16 mx-14 p-6 
         rounded ${ featured && 'border-l-4 border-black border-solid'} sm:flex-row sm:my-4`}>
-   <Link to={`/Jobs${id}`}>
+   <Link to={`/jobs/${id}`}>
     <div>
  
         <img className='-mt-16 mb-4 w-20 h-20 sm:h-24 
@@ -66,7 +66,7 @@ const JobBoardComponent = ({
             )}
      
         </h3>
-        <Link to={`/Jobs${id}`}>
+        <Link to={`/jobs/${id}`}>
         <h2 className='font-bold text-xl my-2'> 
         {position} 
         </h2>
