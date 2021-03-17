@@ -1,8 +1,26 @@
 import data from '../assets/companyDescription.json';
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
-const DisplayCompanyProfile = () => {
+const DisplayCompanyProfile = (props) => {
+    const{ match }= props;
+    const{ params } = match;
+    const{ companyId }= params;
+    const [company, setCompany] = useState([])
 
+    useEffect(()=>{
+        axios.get(`/api/company/${companyId}`)
+        .then(function(response){
+            const dataResponse = response;
+            const singleCompanyData = dataResponse.data
+            // console.log(singleCompanyData)
+            setCompany(singleCompanyData);
+
+        })
+    },[]);
+
+    const item=company;
+    console.log(item.adress)
    
 
     return ( 
@@ -11,7 +29,7 @@ const DisplayCompanyProfile = () => {
             <div className='logo flex items-center'>
                 <img className="w-60" src="./images/faceit.svg" alt=""/>
                 <div className='title flex justify-center font-bold text-6xl  m-auto'>
-                <h1>Numele Companiei</h1>
+                <h1>{item.name}</h1>
           
             </div>
          
@@ -23,9 +41,7 @@ const DisplayCompanyProfile = () => {
             </div>
             <div className='descriprion px-12 justify-center flex text-lg'>
            
-                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ullam nihil quidem delectus unde, optio veniam deserunt modi? Repudiandae pariatur dolorum voluptatum debitis ea totam cupiditate eum repellat, ad mollitia.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ullam nihil quidem delectus unde, optio veniam deserunt modi? Repudiandae pariatur dolorum voluptatum debitis ea totam cupiditate eum repellat, ad mollitia.
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia ullam nihil quidem delectus unde, optio veniam deserunt modi? Repudiandae pariatur dolorum voluptatum debitis ea totam cupiditate eum repellat, ad mollitia.
+                <h3>{item.description}
                 </h3>
             </div>
             <div className="text-gray-800 font-bold flex justify-center text-3xl py-4">
@@ -35,10 +51,10 @@ const DisplayCompanyProfile = () => {
                  rounded-2xl uppercase text-sm text-gray-500' >
        
          
-                <span><i class="fas fa-map-marker-alt"></i>Strada Mama nr 3 </span>
-                <a href="tel:+1123-456-7890"><i class="fas fa-phone-square-alt"></i>123-456-7890</a>
-                <a href="mailto:email@example.com"><i class="fas fa-envelope"></i> email@example.com </a>
-                <a href="#"><i class="fas fa-at"></i>www.example.com</a>
+                <span><i className="fas fa-map-marker-alt"></i>Strada Mama nr 3 </span>
+                <a href="tel:+1123-456-7890"><i className="fas fa-phone-square-alt"></i>{item.phoneNumber}</a>
+                <a href="mailto:email@example.com"><i className="fas fa-envelope"></i> {item.email}</a>
+                <a href="#"><i className="fas fa-at"></i>{item.website}</a>
               
             </div>  
         </div>
