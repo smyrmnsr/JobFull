@@ -8,16 +8,17 @@ const DisplayCompanyProfile = (props) => {
     const{ companyId }= params;
     const [company, setCompany] = useState([])
 
-    useEffect(()=>{
-        axios.get(`/api/company/${companyId}`)
-        .then(function(response){
-            const dataResponse = response;
-            const singleCompanyData = dataResponse.data
-            // console.log(singleCompanyData)
-            setCompany(singleCompanyData);
 
-        })
-    },[]);
+    useEffect(()=>{
+        const fetchItems = async()=>{
+            const response = await axios(`/api/company/${companyId}`)
+            const singleCompanyData = response.data;
+            // console.log(response.data);
+            setCompany(singleCompanyData);
+            
+        }
+        fetchItems()
+    },[])
 
     const item=company;
     console.log(item.adress)
@@ -27,7 +28,7 @@ const DisplayCompanyProfile = (props) => {
         <>
         <div className="container m-auto px-20 singleJob">
             <div className='logo flex items-center'>
-                <img className="w-60" src="./images/faceit.svg" alt=""/>
+                <img className="w-60" src={item.logo} alt=""/>
                 <div className='title flex justify-center font-bold text-6xl  m-auto'>
                 <h1>{item.name}</h1>
           
@@ -51,7 +52,7 @@ const DisplayCompanyProfile = (props) => {
                  rounded-2xl uppercase text-sm text-gray-500' >
        
          
-                <span><i className="fas fa-map-marker-alt"></i>Strada Mama nr 3 </span>
+                <span><i className="fas fa-map-marker-alt"></i>{item.adress} </span>
                 <a href="tel:+1123-456-7890"><i className="fas fa-phone-square-alt"></i>{item.phoneNumber}</a>
                 <a href="mailto:email@example.com"><i className="fas fa-envelope"></i> {item.email}</a>
                 <a href="#"><i className="fas fa-at"></i>{item.website}</a>

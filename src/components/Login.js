@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Login = () => {
     return ( 
   <>
@@ -26,7 +28,7 @@ const Login = () => {
             </main>
 
             <div className="max-w-lg mx-auto text-center mt-12 mb-6">
-                <p >Don't have an account? <a href="#" className="font-bold hover:underline">Sign up</a>.</p>
+                <p >Don't have an account? <Link to={"/register"} class="font-bold hover:underline">Sign up</Link>.</p>
             </div>
 
        </>

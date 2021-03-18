@@ -12,16 +12,27 @@ const DisplayAllJobs = () => {
 
   // useEffect(() => setJobs(data), []);
 
-  useEffect(()=>{
-    axios.get("/api/jobs")
-      .then(function(response){
-        const dataResponse = response;
-        const data = dataResponse.data
+  // useEffect(()=>{
+  //   axios.get("/api/jobs")
+  //     .then(function(response){
+  //       const dataResponse = response;
+  //       const data = dataResponse.data
        
-        // console.log(data[0].id)
-        setJobs(data)
-      })
-  },[]);
+  //       // console.log(data[0].id)
+  //       setJobs(data)
+  //     })
+  // },[]);
+
+  useEffect(()=>{
+    const fetchItems = async()=>{
+        const response = await axios(`/api/jobs`)
+        const data = response.data;
+        // console.log(response.data);
+        setJobs(data);
+        
+    }
+    fetchItems()
+},[])
 
 
 
