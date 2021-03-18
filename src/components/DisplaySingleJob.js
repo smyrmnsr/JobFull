@@ -7,12 +7,13 @@ const DisplaySingleJob = (props)=>{
     const [singleJob, setSingleJob] = useState([]);
     const{ match }= props;
     const{ params } = match;
-    const{ jobId }= params;
+    const{ companyId, jobId }= params;
 
 
     useEffect(()=>{
         const fetchItems = async()=>{
-            const response = await axios(`/api/jobs/${jobId}`)
+            console.log(companyId, jobId);
+            const response = await axios(`/api/jobs/${jobId}/${companyId}`);
             const singleJobData = response.data;
             // console.log(response.data);
             setSingleJob(singleJobData);
@@ -41,7 +42,7 @@ const DisplaySingleJob = (props)=>{
         <div>
                    <div className="companyDetaile flex justify-between ml-4 py-12  ">
                        {/* aici company id */}
-            <Link to={`/company/${item.companyId}`}> 
+            <Link to={`/company/${item.id}`}> 
                 <p>{item.company} </p>
             </Link>
                 <span> jobs opening: {item.openPositions}</span>

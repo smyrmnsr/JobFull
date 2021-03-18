@@ -21,7 +21,7 @@ function App() {
           {/* <AddJob/> */}
 
           <Route exact path='/' render={(props)=><DisplayAllJobs{...props}/>}/>
-          <Route exact path='/jobs/:jobId' render={(props)=><DisplaySingleJob {...props}/>}/>
+          <Route exact path='/jobs/:companyId/:jobId' render={(props)=><DisplaySingleJob {...props}/>}/>
           <Route exact path='/my-account' render={(props)=><CustomerAccount {...props}/>}/>
           <Route exact path='/company/:companyId' render={(props)=><DisplayCompanyProfile {...props}/>}/> 
           <Route exact path='/login' render={(props)=><Login {...props}/>}/>
