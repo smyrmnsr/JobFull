@@ -15,8 +15,9 @@ const Navbar = () => {
                     <ul className="flex space-x-6 items-center ">
                         <li> <Link to='/'>Jobs</Link></li>
                         <li><a href="#">Company</a></li>
+                        <li> <Link to='/my-account'>My Account</Link></li>
                         <li>&#124;</li>
-                        <li><a href="#" > Sign Up</a></li>
+                        <li> <Link to='/register'>Sign Up</Link></li>
                         <li> <Link to='/login'>Sign In</Link></li>
                     </ul>
              

@@ -37,17 +37,17 @@ const JobBoardComponent = ({
    
         className={`flex flex-col bg-white shadow-md my-16 mx-14 p-6 
         rounded ${ featured && 'border-l-4 border-black border-solid'} sm:flex-row sm:my-4`}>
-   <Link to={`/jobs/${id}`}>
-    <div>
+        <Link to={`/jobs/${id}`}>
+            <div>
  
         <img className='-mt-16 mb-4 w-20 h-20 sm:h-24 
-        sm:w-24 sm:my-0' src={`${logo}`} alt={company} />
-    </div>
+            sm:w-24 sm:my-0' src={`${logo}`} alt={company} />
+            </div>
     </Link>
     <div className='flex flex-col justify-between ml-4'>
         <h3 className='font-bold text-green-800'>
             {/* aici trebuie sa schimb cu company id */}
-       <Link to={`/company${id}`}> 
+       <Link to={`/company/${id}`}> 
             {company}
         </Link>
             {isNew && ( 
