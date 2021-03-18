@@ -23,6 +23,7 @@ const JobBoardComponent = ({
     handleTagClick, 
 }) => {
     const tags = [role, level];
+    console.log(tags)
 
     if (tools) {
         tags.push(...tools);

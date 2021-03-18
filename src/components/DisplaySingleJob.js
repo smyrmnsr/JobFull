@@ -23,6 +23,7 @@ const DisplaySingleJob = (props)=>{
     },[])
 
     const item = singleJob;
+    console.log(item.logo)
   
     const languages = item.languages;
 
@@ -41,8 +42,7 @@ const DisplaySingleJob = (props)=>{
             </div>
         <div>
                    <div className="companyDetaile flex justify-between ml-4 py-12  ">
-                       {/* aici company id */}
-            <Link to={`/company/${item.id}`}> 
+            <Link to={`/company/${item.companyId}`}>
                 <p>{item.company} </p>
             </Link>
                 <span> jobs opening: {item.openPositions}</span>

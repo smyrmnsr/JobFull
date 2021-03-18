@@ -34,7 +34,8 @@ const DisplayAllJobs = () => {
     fetchItems()
 },[])
 
-
+  const foo = jobs
+  console.log(foo)
 
   const filterFunction = ({role, level, tools, languages}) => {
     if (filters.length === 0) {
@@ -69,6 +70,7 @@ const DisplayAllJobs = () => {
   }
 
   const filteredJobs = jobs.filter(filterFunction);
+  console.log(filteredJobs);
 
 
 

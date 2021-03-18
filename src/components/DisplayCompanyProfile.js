@@ -21,15 +21,15 @@ const DisplayCompanyProfile = (props) => {
     },[])
 
     const item=company;
-    console.log(item.adress)
+    console.log(item.logo)
    
 
     return ( 
         <>
         <div className="container m-auto px-20 singleJob">
             <div className='logo flex items-center'>
-                <img className="w-60" src={item.logo} alt=""/>
-                <div className='title flex justify-center font-bold text-6xl  m-auto'>
+                <img className="w-60" src={`.${item.logo}`} alt=""/>
+                <div className='title flex justify-center font-bold text-6xl  '>
                 <h1>{item.name}</h1>
           
             </div>
