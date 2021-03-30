@@ -1,5 +1,6 @@
 // import data from '../assets/companyDescription.json';
 import {useState, useEffect} from 'react';
+import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 
 const DisplayCompanyProfile = (props) => {
@@ -11,7 +12,7 @@ const DisplayCompanyProfile = (props) => {
 
     useEffect(()=>{
         const fetchItems = async()=>{
-            const response = await axios(`/api/company/${companyId}`)
+            const response = await axios(BASE_URL + `/companies/${companyId}`)
             const singleCompanyData = response.data;
             // console.log(response.data);
             setCompany(singleCompanyData);

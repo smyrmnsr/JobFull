@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import JobBoardComponent from './JobBoardComponent';
+import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 
 const DisplayAllJobs = () => {
@@ -9,7 +10,7 @@ const DisplayAllJobs = () => {
 
   useEffect(()=>{
     const fetchItems = async()=>{
-        const response = await axios(`/api/jobs`)
+        const response = await axios(BASE_URL + `/jobs`)
         const data = response.data;
         // console.log(response.data);
         setJobs(data);

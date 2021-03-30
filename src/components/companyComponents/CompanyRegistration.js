@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 
 class CompanyRegistration extends Component {
@@ -20,7 +21,7 @@ class CompanyRegistration extends Component {
   
     axios({
       method: 'post',
-      url: 'http://localhost:8080/api/company/addCompany',
+      url: BASE_URL + '/companies',
       data: body,
       headers: { 
     'Access-Control-Allow-Origin': '*' },

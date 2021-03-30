@@ -1,6 +1,7 @@
 // import data from '../assets/data.json';
 import {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 
 const DisplaySingleJob = (props)=>{
@@ -13,7 +14,7 @@ const DisplaySingleJob = (props)=>{
     useEffect(()=>{
         const fetchItems = async()=>{
             console.log(companyId, jobId);
-            const response = await axios(`/api/jobs/${jobId}/${companyId}`);
+            const response = await axios(BASE_URL + `/jobs/${jobId}`);
             const singleJobData = response.data;
             // console.log(response.data);
             setSingleJob(singleJobData);
