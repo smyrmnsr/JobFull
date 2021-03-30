@@ -8,6 +8,7 @@ import Login from './components/commonComponents/Login';
 import SelectRegistrationType from './components/commonComponents/SelectRegistrationType';
 import CompanyRegistration from './components/companyComponents/CompanyRegistration';
 import UserRegistration from './components/jobAplicant/UserRegistration';
+import MyCompanyAccount from './components/companyComponents/MyCompanyAccount';
 
 function App() {
  
@@ -20,7 +21,7 @@ function App() {
 
           <Route exact path='/' render={(props)=><DisplayAllJobs{...props}/>}/>
           <Route exact path='/jobs/:companyId/:jobId' render={(props)=><DisplaySingleJob {...props}/>}/>
-          {/* <Route exact path='/my-account' render={(props)=><CustomerAccount {...props}/>}/> */}
+          <Route exact path='/my-account' render={(props)=><MyCompanyAccount {...props}/>}/>
           <Route exact path='/company/:companyId' render={(props)=><DisplayCompanyProfile {...props}/>}/> 
           <Route exact path='/login' render={(props)=><Login {...props}/>}/>
           <Route exact path='/register' render={(props)=><SelectRegistrationType {...props}/>}/>

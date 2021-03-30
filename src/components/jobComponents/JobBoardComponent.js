@@ -5,7 +5,7 @@ const JobBoardComponent = ({
         job: {
             id,
             description,
-            company, 
+            name, 
             logo, 
             isNew, 
             featured, 
@@ -45,14 +45,14 @@ const JobBoardComponent = ({
               className='-mt-16 mb-4 w-20 h-20 sm:h-24 
             sm:w-24 sm:my-0'
               src={`${logo}`}
-              alt={company}
+              alt={name}
             />
           </div>
         </Link>
         <div className='flex flex-col justify-between ml-4'>
           <h3 className='font-bold text-green-800'>
             {/* aici trebuie sa schimb cu company id */}
-            <Link to={`/company/${companyId}`}>{company}</Link>
+            <Link to={`/company/${id}`}>{name}</Link>
             {isNew && (
               <span
                 className='bg-gray-500
