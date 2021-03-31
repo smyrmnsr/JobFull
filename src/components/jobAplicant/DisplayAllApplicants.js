@@ -1,5 +1,5 @@
 import React, {  useState, useEffect } from 'react'
-import BASE_URL from "../BASE_URL";
+import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 
 const DisplayAllApplicants = (props)=> {
