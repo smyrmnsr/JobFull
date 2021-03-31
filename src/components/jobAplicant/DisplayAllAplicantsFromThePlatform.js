@@ -29,22 +29,33 @@ const DisplayAllApplicantsFromThePlatform = () => {
 
 	const onSubmitForm = (e) => {
 		e.preventDefault();
-		// TODO : Create endpoint for search
+		// TODO : Create endpoint for full name search search
 
-		// axios({
-		// 	method: 'GET',
-		// 	url: BASE_URL + `/jobhunters?name=${e.target.search.value}`,
-		// 	headers: {
-		// 		'Access-Control-Allow-Origin': '*',
-		// 	},
-		// })
-		// 	.then((response) => {
-		// 		setJobHunters(response.data);
-		// 	})
-		// 	.catch((response) => {
-		// 		// TODO: handle error
-		// 		console.log(response);
-		// 	});
+		axios({
+			method: 'GET',
+			url: BASE_URL + `/jobhunter?lastName=${e.target.search.value}`,
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+			},
+		})
+			.then((response) => {
+
+				if (response.data.length !== 0) setJobHunters(response.data);
+				else {
+					document.getElementById("search").placeholder = "No results found"
+					document
+						.getElementById('search')
+						.classList.add('placeholder-red-600')
+					setTimeout(() => {
+						document.getElementById('search').placeholder = 'Search by Last name';
+						document.getElementById('search').classList.remove('placeholder-red-600');
+				}, 1000)
+				}
+			})
+			.catch((response) => {
+				// TODO: handle error
+				console.log(response);
+			});
 		e.target.reset();
 	};
 
@@ -81,12 +92,12 @@ const clearFilters = () => {
 				{/* Search Bar */}
 				<form onSubmit={onSubmitForm} method='GET' action='#'>
 					<div className='p-8'>
-						<div className='bg-white flex items-center rounded-full shadow-xl'>
+						<div className='bg-white flex items-center rounded-full shadow-xl '>
 							<input
-								className='rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none'
+								className='rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none '
 								id='search'
 								type='text'
-								placeholder='Nu merge momentan'
+								placeholder='Search by Last name'
 							/>
 							<div className='p-4'>
 								<button className='bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center'>
