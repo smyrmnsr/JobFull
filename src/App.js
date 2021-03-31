@@ -9,6 +9,7 @@ import SelectRegistrationType from './components/commonComponents/SelectRegistra
 import CompanyRegistration from './components/companyComponents/CompanyRegistration';
 import UserRegistration from './components/jobAplicant/UserRegistration';
 import MyCompanyAccount from './components/companyComponents/MyCompanyAccount';
+import CreateJob from './components/companyComponents/CreateJob';
 
 function App() {
  
@@ -27,6 +28,7 @@ function App() {
           <Route exact path='/register' render={(props)=><SelectRegistrationType {...props}/>}/>
           <Route exact path='/company-register' render={(props)=><CompanyRegistration {...props}/>}/>
           <Route exact path='/user-register' render={(props)=><UserRegistration {...props}/>}/>
+          <Route exact path='/add-job' render={(props)=><CreateJob {...props}/>}/>
       </div>
     </BrowserRouter>
   );
