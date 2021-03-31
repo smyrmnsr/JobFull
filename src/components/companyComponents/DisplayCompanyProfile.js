@@ -10,7 +10,6 @@ const DisplayCompanyProfile = (props) => {
     const{ companyId }= params;
     const [company, setCompany] = useState([])
 
-    console.log(props)
    
 
 

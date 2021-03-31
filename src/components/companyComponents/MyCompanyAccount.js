@@ -10,17 +10,10 @@ const MyCompanyAccount = (props) => {
     const [myCompany, setMyCompany] = useState();
     const activeJobs= myCompany;
 
-    console.log(props)
-
-
-
-
-
-
-
+ 
         useEffect(()=>{
             const fetchItems = async()=>{
-                const response = await axios(BASE_URL + `/companies/b3a2bd65-c775-4703-af81-adb298877e17/jobs/active`)
+                const response = await axios(BASE_URL + `/companies/b959d3f6-3d09-4925-84fd-8a21972316ac/jobs/active`)
                 const data = response.data
                 setMyCompany(data);
                 
@@ -39,8 +32,11 @@ const MyCompanyAccount = (props) => {
                     <ul className="flex space-x-6 items-center justify-around mx-auto ">
                             <li> <Link to='/add-job'>Add Job</Link></li>
                             <li> <Link to='#'>All Jobs</Link></li>
-                            <li> <Link to='`/company/${companyId}`'>Company Description</Link></li>
-                            <li> <Link to='#'>Job Aplicants</Link></li>
+                            {activeJobs && activeJobs.map((job,index)=>(
+                        <li> <Link to={`/company/${job.companyIdForApi}`}>Company Description</Link></li>
+                            ))}
+                          
+                            <li> <Link to='/job-aplicants'>Job Aplicants</Link></li>
                     </ul>
                 </div>
             </div>

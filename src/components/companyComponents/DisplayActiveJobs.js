@@ -6,7 +6,7 @@ const DisplayActiveJobs = (job) => {
 
 
 
-    console.log(job)
+
 
     return ( 
         <div
