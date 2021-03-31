@@ -2,8 +2,7 @@ import { Link } from 'react-router-dom';
 
 
 const DisplayActiveJobs = (job) => {
-  // {id, name,contract,location, openPositions,postedDate,expireDate} = job.job
-// console.log(job.job.name)
+
 
     return ( 
         <div
@@ -13,9 +12,9 @@ const DisplayActiveJobs = (job) => {
 
         <div className='flex flex-col justify-between ml-4'>
           <h3 className='font-bold text-green-800'>
-            {job.job.name}
+          Open Positions: {job.job.openPositions} 
           </h3>
-            <h2 className='font-bold text-xl my-2'>Open Positions: {job.job.openPositions}</h2>
+            <h2 className='font-bold text-xl my-2'> {job.job.name}</h2>
         
           <p className='text-gray-700'>
             {job.job.postedDate} &#183;

@@ -6,9 +6,11 @@ import axios from "axios";
 
 
 
-const MyCompanyAccount = () => {
+const MyCompanyAccount = (props) => {
     const [myCompany, setMyCompany] = useState();
     const activeJobs= myCompany;
+
+    console.log(props)
 
 
 

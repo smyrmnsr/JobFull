@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import LOGO from "../../myhome.svg";
 
 
 const JobBoardComponent = ({ 
@@ -9,7 +10,6 @@ const JobBoardComponent = ({
             logo, 
             isNew, 
             featured, 
-            position,
             role, 
             level, 
             postedAt, 
@@ -17,12 +17,14 @@ const JobBoardComponent = ({
             location, 
             languages, 
             companyId,
-            tools
+            tools,
+            companyIdForApi,
+            companyName
         },
     handleTagClick, 
 }) => {
     const tags = [role, level];
-    console.log(tags)
+    // console.log(tags)
 
     if (tools) {
         tags.push(...tools);
@@ -32,6 +34,7 @@ const JobBoardComponent = ({
         tags.push(...languages);
     }
 
+  
     return (
       <div
         className={`flex flex-col bg-white shadow-md my-16 mx-14 p-6 
@@ -44,7 +47,7 @@ const JobBoardComponent = ({
             <img
               className='-mt-16 mb-4 w-20 h-20 sm:h-24 
             sm:w-24 sm:my-0'
-              src={`${logo}`}
+              src={LOGO}
               alt={name}
             />
           </div>
@@ -52,7 +55,7 @@ const JobBoardComponent = ({
         <div className='flex flex-col justify-between ml-4'>
           <h3 className='font-bold text-green-800'>
             {/* aici trebuie sa schimb cu company id */}
-            <Link to={`/company/${id}`}>{name}</Link>
+            <Link to={`/company/${companyIdForApi }`}>{companyName}</Link>
             {isNew && (
               <span
                 className='bg-gray-500
@@ -72,8 +75,8 @@ const JobBoardComponent = ({
               </span>
             )}
           </h3>
-          <Link to={`/jobs/${id}/${companyId}`}>
-            <h2 className='font-bold text-xl my-2'>{position}</h2>
+          <Link to={`/jobs/${id}/${companyIdForApi}`}>
+            <h2 className='font-bold text-xl my-2'>{name}</h2>
           </Link>
           <p className='text-gray-700'>
             {postedAt} &#183;

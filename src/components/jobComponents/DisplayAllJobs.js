@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import JobBoardComponent from './JobBoardComponent';
 import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
+import Loading from "../../Ripple-1s-200px.svg";
 
 const DisplayAllJobs = () => {
   const [jobs, setJobs] = useState([]);
@@ -20,7 +21,7 @@ const DisplayAllJobs = () => {
 },[])
 
   const foo = jobs
-  console.log(foo)
+
 
   const filterFunction = ({role, level, tools, languages}) => {
     if (filters.length === 0) {
@@ -55,7 +56,7 @@ const DisplayAllJobs = () => {
   }
 
   const filteredJobs = jobs.filter(filterFunction);
-  console.log(filteredJobs);
+
 
 
 
@@ -85,7 +86,7 @@ const DisplayAllJobs = () => {
       )}
 
       {jobs.length === 0 ? (
-        <p>Jobs are fetching...</p>
+          <img src={Loading} alt=""/>
       ) : (
         filteredJobs.map((job) => (
      

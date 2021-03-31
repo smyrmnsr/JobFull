@@ -3,20 +3,22 @@ import {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
+import LOGO from "../../myhome.svg";
 
 const DisplaySingleJob = (props)=>{
     const [singleJob, setSingleJob] = useState([]);
     const{ match }= props;
     const{ params } = match;
-    const{ companyId, jobId }= params;
+    const{  companyId ,jobId}= params;
+    // console.log(props)
 
 
     useEffect(()=>{
         const fetchItems = async()=>{
-            console.log(companyId, jobId);
+            // console.log(companyId, jobId);
             const response = await axios(BASE_URL + `/jobs/${jobId}`);
             const singleJobData = response.data;
-            // console.log(response.data);
+
             setSingleJob(singleJobData);
             
         }
@@ -24,7 +26,7 @@ const DisplaySingleJob = (props)=>{
     },[])
 
     const item = singleJob;
-    console.log(item.logo)
+
   
     const languages = item.languages;
 
@@ -34,17 +36,17 @@ const DisplaySingleJob = (props)=>{
      
         <div className="container m-auto px-20 singleJob">
             <div className='logo flex items-center'>
-                <img className="w-60" src={`.${item.logo}`} alt=""/>
+                <img className="w-60" src={LOGO} alt=""/>
                 <div className='title flex justify-center font-bold text-6xl  m-auto'>
-                <h1>{item.position}</h1>
+                <h1>{item.name}</h1>
           
             </div>
             <button className="btn" type="submit"> Apply</button>
             </div>
         <div>
                    <div className="companyDetaile flex justify-between ml-4 py-12  ">
-            <Link to={`/company/${item.companyId}`}>
-                <p>{item.company} </p>
+            <Link to={`/company/${companyId}`}>
+                <p>{item.companyName} </p>
             </Link>
                 <span> jobs opening: {item.openPositions}</span>
             </div>

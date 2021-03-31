@@ -2,12 +2,16 @@
 import {useState, useEffect} from 'react';
 import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
+import LOGO from "../../myhome.svg";
 
 const DisplayCompanyProfile = (props) => {
     const{ match }= props;
     const{ params } = match;
     const{ companyId }= params;
     const [company, setCompany] = useState([])
+
+    console.log(props)
+   
 
 
     useEffect(()=>{
@@ -22,14 +26,15 @@ const DisplayCompanyProfile = (props) => {
     },[])
 
     const item=company;
-    console.log(item.logo)
+    
+
    
 
     return ( 
         <>
         <div className="container m-auto px-20 singleJob">
             <div className='logo flex items-center'>
-                <img className="w-60" src={`.${item.logo}`} alt=""/>
+                <img className="w-60" src={LOGO} alt=""/>
                 <div className='title flex justify-center font-bold text-6xl  '>
                 <h1>{item.name}</h1>
           
