@@ -110,10 +110,10 @@ class CreateJob extends Component {
                     <div className='w-1/2 ml-1'>
                         <input
                             className='bg-gray-200 appearance-none border rounded w-full py-2 px-3 text-grey-darker'
-                            name='phoneNumber'
+                            name='languages'
                             type='text'
                             defaultValue=''
-                            placeholder='Foreign Languages'
+                            placeholder='Programming Languages'
                             required
                         />
                     </div>
@@ -123,7 +123,7 @@ class CreateJob extends Component {
                     <div className='w-1/2 mr-1'>
                         <input
                             className='bg-gray-200 appearance-none border rounded w-full py-2 px-3 text-grey-darker'
-                            name='languages'
+                            name='tools'
                             type='text'
                             defaultValue=''
                             placeholder='Technologies'
