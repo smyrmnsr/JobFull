@@ -10,6 +10,7 @@ import CompanyRegistration from './components/companyComponents/CompanyRegistrat
 import UserRegistration from './components/jobAplicant/UserRegistration';
 import MyCompanyAccount from './components/companyComponents/MyCompanyAccount';
 
+
 function App() {
  
   return (
@@ -18,7 +19,7 @@ function App() {
 
           <Navbar/>
           {/* <AddJob/> */}
-
+         
           <Route exact path='/' render={(props)=><DisplayAllJobs{...props}/>}/>
           <Route exact path='/jobs/:jobId/:companyId' render={(props)=><DisplaySingleJob {...props}/>}/>
           <Route exact path='/my-account' render={(props)=><MyCompanyAccount {...props}/>}/>
