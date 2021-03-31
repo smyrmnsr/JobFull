@@ -37,7 +37,7 @@ const MyCompanyAccount = (props) => {
             <div className="px-12 mx-auto py-5">
                 <div className="flex justify-between">    
                     <ul className="flex space-x-6 items-center justify-around mx-auto ">
-                            <li> <Link to='#'>Add Job</Link></li>
+                            <li> <Link to='/add-job'>Add Job</Link></li>
                             <li> <Link to='#'>All Jobs</Link></li>
                             <li> <Link to='`/company/${companyId}`'>Company Description</Link></li>
                             <li> <Link to='#'>Job Aplicants</Link></li>
