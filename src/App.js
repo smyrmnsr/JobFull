@@ -42,6 +42,7 @@ function App() {
           <Route exact path='/all-aplicants' render={(props)=><DisplayAllApplicantsFromThePlatform {...props}/>}/>
           <Route exact path='/jobhunter-profile/:id' render={(props)=><JobHunterProfilePage {...props}/>}/>
           <Route exact path='/my-jobs' render={(props)=><DisplayAllJobsFromCompany {...props}/>}/>
+        
           {/* <Footer/> */}
       </div>
     </BrowserRouter>

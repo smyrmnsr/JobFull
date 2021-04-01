@@ -44,16 +44,14 @@ const MyCompanyAccount = (props) => {
             <h1 className="title-choose justify-center">ACTIVE JOBS</h1>
         </div>
 
-{/* map the display cu id */}
-
-{
+    {
     
         (activeJobs && activeJobs.map((job,index) => (
      
           <DisplayActiveJobs 
             job={job} 
             key={index}/>)))
-      } 
+    } 
 
 
 
