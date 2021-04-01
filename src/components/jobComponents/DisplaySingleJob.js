@@ -53,18 +53,29 @@ const DisplaySingleJob = (props)=>{
             <div className='detail  flex justify-between font-bold m-3 py-1 px-6    
                  rounded-2xl uppercase text-sm text-gray-500' >
                 <span>Work Location : {item.location}</span>
-                <span>Job Type: {item.contract}</span>
                 <span>Career Level: {item.level}</span>
-                <span>Job Role: {item.role}</span>
-                <span>Languages: {languages}</span>
+                <span>Education: {item.educationLevel}</span>
+                <span>Contract Type: {item.contract}</span>
+                <span>Department {item.role}</span>
+                <span>Programming Languages: {item.languages}</span>
+                <span>Technologies: {item.tools}</span>
+                <span>Date of posting: {item.postedAt}</span>
             </div>
             <div className="text-gray-800 font-bold">
-                <h2>Job Description</h2>
+                <h2>Ideal Canditate</h2>
             </div>
             <div className='descriprion px-12 justify-center flex text-lg'>
            
-                <h3>{item.description}
+                <h3>{item.bio}
                 </h3>
+            </div>
+            <div className="text-gray-800 font-bold">
+                <h4>Job Description</h4>
+            </div>
+            <div className='descriprion px-12 justify-center flex text-lg'>
+           
+                <h5>{item.description}
+                </h5>
             </div>
         </div>
           <div className='flex justify-center '>
