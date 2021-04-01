@@ -6,7 +6,7 @@ const DisplayAllApplicants = (props)=> {
     
     
     const [applicants, setApplicants] = useState([]);
-   
+
     useEffect(()=>{
         const fetchItems = async()=>{
             const response = await axios(BASE_URL + `/jobs/6d7b7811-1190-4319-8e48-6d459a1da38d/applicants`)
@@ -18,21 +18,19 @@ const DisplayAllApplicants = (props)=> {
         fetchItems()
     },[])
     
-      const jobhunters = applicants
-  
-      
+    const jobhunters = applicants
     
 
     const  renderTableData = () => {
-       
-       return (
-           <table>
-         <thead>
-         <tr>
-             <th>First Name</th>
-             <th>Last Name</th>
-             <th>Telephone Number</th>
-             <th>Email</th>
+    
+    return (
+        <table>
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Telephone Number</th>
+            <th>Email</th>
         </tr>
         </thead>
         <tbody>
@@ -41,27 +39,25 @@ const DisplayAllApplicants = (props)=> {
         jobhunters.map((data, index) => ( 
             
             <tr key={data.id}>
-             
-             <td>{data.firstName}</td>
-             <td>{data.lastName}</td>
-             <td>{data.phoneNumber}</td>
-             <td>{data.email}</td>
-           
             
-             <button type="submit" id="selecter"> Select for interview</button>
+                <td>{data.firstName}</td>
+                <td>{data.lastName}</td>
+                <td>{data.phoneNumber}</td>
+                <td>{data.email}</td>
+
+                <button type="submit" id="selecter"> Select for interview</button>
             </tr>
         ))
         }
-          </tbody>
-          </table>
-       );
+        </tbody>
+        </table>
+    );
     }
 
     return (
         <div class="card">
             <div class= "card-body">
     
-           
                 <h2 className="title-choose ">Jobs Applicants</h2>
                 <table id='jobhunters'>
                     
@@ -69,8 +65,8 @@ const DisplayAllApplicants = (props)=> {
                         {renderTableData()}
                         </tr>
                 </table>
-          </div>
-       </div>
+            </div>
+        </div>
     )
 
     }

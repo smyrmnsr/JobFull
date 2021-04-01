@@ -9,9 +9,9 @@ class HomePage extends Component {
 		this.state = {
 			currentImage: 0,
 			images: [
-				"https://i.dlpng.com/static/png/6846483_preview.png",
-				"https://lh3.googleusercontent.com/proxy/QGkuP7ZdihoBZ_2Z60dUA9UqcJzaARSlTNFB63yxsjMAsZeiiOAeL_wHkJEkcd8Gxv58sHFbO0b6OcleR8D0SybKb9rNSZvuiMqclwlZLPFVFsu1v9KjZoNfKllD3ek",
-				"http://pngimg.com/uploads/businessman/businessman_PNG6588.png",
+				"https://static.wixstatic.com/media/f54cdd_7e9b35f6adef42b69672de3a53be6e81~mv2.png/v1/fill/w_560,h_356,al_c,q_85,usm_0.66_1.00_0.01/business-woman-png-7-transparent.webp",
+				"https://pngimg.com/uploads/thinking_man/thinking_man_PNG11613.png",
+				"https://pngimg.com/uploads/businessman/businessman_PNG6572.png",
 				"https://pngimg.com/uploads/businessman/businessman_PNG6558.png"
 		]
 		};
@@ -67,8 +67,7 @@ class HomePage extends Component {
 			<div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative">
 				<img 
 					src={this.state.images[this.state.currentImage]}
-					alt="cleaning images" 
-					class="max-w-md md:max-w-3xl m-auto"
+					class="max-w-md md:max-w-xl m-auto"
 				/>
 			</div>
 		</div>
