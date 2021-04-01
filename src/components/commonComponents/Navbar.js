@@ -15,8 +15,9 @@ const Navbar = () => {
                     <ul className="flex space-x-6 items-center ">
                         <li> <Link to='/display-job'>Jobs</Link></li>
                         <li> <Link to='/all-aplicants'>Job Hunters</Link></li>
+                        <li> <Link to='/jobhunter-profile/8741fb89-571f-48c0-b148-9b36c299b083'>Job Hunter Dashboard</Link></li>
                         <li><a href="#">Company</a></li>
-                        <li> <Link to='/my-account'>My Account</Link></li>
+                        <li> <Link to='/my-account'>Company Dashboard</Link></li>
                         <li>&#124;</li>
                         <li> <Link to='/register'>Sign Up</Link></li>
                         <li> <Link to='/login'>Sign In</Link></li>

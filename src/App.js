@@ -45,6 +45,7 @@ function App() {
           <Switch>
           <Route exact path='/cv' component={TemplateData} />
           </Switch>
+
           {/* <Footer/> */}
 
       </div>
