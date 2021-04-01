@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import BASE_URL from "../../BASE_URL";
+import axios from 'axios';
 class UserRegistration extends Component {
     constructor(props) {
         super(props)
@@ -17,8 +18,24 @@ class UserRegistration extends Component {
         //aici putem actualiza, elimina, adăuga valori / proprietăți în obiectul, e de folos dacă trebuie facut un proces de verificare, criptare date sau oriunde vrem.
         console.table(body)
         // Request merge aici.
+    axios({
+        method: 'post',
+        url: BASE_URL + '/jobhunter',
+        data: body,
+        headers: { 
+      'Access-Control-Allow-Origin': '*' },
+      })
+        .then(function (response) {
+          //handle success
+          console.log(response);
+        })
+        .catch(function (response) {
+          //handle error
+          console.log(response);
+        });
+      console.table(body);
+      // Request merge aici.
     }
-
 
     render() {  
     return ( 
@@ -38,13 +55,13 @@ class UserRegistration extends Component {
                         <div className="mb-6 pt-3 rounded bg-gray-200">
                             <label 
                                 className="block text-gray-700 text-sm font-bold mb-2 ml-3" 
-                                for="firstname"
+                                for="firstName"
                             >   
                                 First Name
                             </label>
                             <input 
                                 type="text" 
-                                name="firstname" 
+                                name="firstName" 
                                 defaultValue="" 
                                 className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
                                 required
@@ -53,13 +70,13 @@ class UserRegistration extends Component {
                         <div className="mb-6 pt-3 rounded bg-gray-200">
                             <label 
                                 className="block text-gray-700 text-sm font-bold mb-2 ml-3" 
-                                for="lastname"
+                                for="lastName"
                             >
                                 Last Name
                             </label>
                             <input 
                                 type="text" 
-                                name="lastname" 
+                                name="lastName" 
                                 defaultValue="" 
                                 className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
                                 required
@@ -98,12 +115,12 @@ class UserRegistration extends Component {
                         <div className="mb-6 pt-3 rounded bg-gray-200">
                             <label 
                             className="block text-gray-700 text-sm font-bold mb-2 ml-3" 
-                            for="retypepassword"
+                            for="retype_password"
                             >
                                 Retype Password
                             </label>
                             <input 
-                                type="retypepassword" 
+                                type="password" 
                                 name="retype_password" 
                                 defaultValue="" 
                                 className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
