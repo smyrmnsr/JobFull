@@ -27,6 +27,11 @@ const DisplayActiveJobs = (job) => {
             {job.job.location}
           </p>
         </div>
+        <div className='flex flex-wrap  items-center mt-4 mx-4 
+            pt-4 border-t border-gray-500 border-solid 
+                sm:ml-auto sm:border-0 sm:pt-0 sm:mt-0'>
+          <Link to='/job-aplicants'><button className='"bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"'>Job Aplicants</button></Link>
+        </div>
         <div className='flex flex-wrap flex-col items-center mt-4 mx-4 
             pt-4 border-t border-gray-500 border-solid 
                 sm:ml-auto sm:border-0 sm:pt-0 sm:mt-0'>
@@ -34,6 +39,7 @@ const DisplayActiveJobs = (job) => {
                    <div className="delete py-2 cursor-pointer"><i class="fas fa-trash-alt" ></i></div> 
                    
         </div>
+
       </div>
      );
 }

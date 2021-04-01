@@ -19,7 +19,8 @@ const DisplayAllApplicants = (props)=> {
     },[])
     
       const jobhunters = applicants
-      console.log(jobhunters)
+  
+      
     
 
     const  renderTableData = () => {
@@ -59,15 +60,15 @@ const DisplayAllApplicants = (props)=> {
     return (
         <div class="card">
             <div class= "card-body">
-           <h1 id='title'>Job name</h1>
+    
            
-          <h2 id='title'>Applicants list</h2>
-          <table id='jobhunters'>
-             
-                <tr>
-                {renderTableData()}
-                </tr>
-          </table>
+                <h2 className="title-choose ">Jobs Applicants</h2>
+                <table id='jobhunters'>
+                    
+                        <tr>
+                        {renderTableData()}
+                        </tr>
+                </table>
           </div>
        </div>
     )

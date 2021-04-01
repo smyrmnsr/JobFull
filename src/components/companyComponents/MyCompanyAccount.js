@@ -31,12 +31,11 @@ const MyCompanyAccount = (props) => {
                 <div className="flex justify-between">    
                     <ul className="flex space-x-6 items-center justify-around mx-auto ">
                             <li> <Link to='/add-job'>Add Job</Link></li>
-                            <li> <Link to='#'>All Jobs</Link></li>
+                            <li> <Link to='/my-jobs'>All Jobs</Link></li>
                             {activeJobs && activeJobs.map((job,index)=>(
                         <li> <Link to={`/company/${job.companyIdForApi}`}>Company Description</Link></li>
                             ))}
                           
-                            <li> <Link to='/job-aplicants'>Job Aplicants</Link></li>
                     </ul>
                 </div>
             </div>
