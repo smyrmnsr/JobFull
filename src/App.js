@@ -1,4 +1,4 @@
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import DisplayAllJobs from "./components/jobComponents/DisplayAllJobs";
 import DisplayCompanyProfile from "./components/companyComponents/DisplayCompanyProfile";
 import DisplaySingleJob from './components/jobComponents/DisplaySingleJob';
@@ -16,8 +16,7 @@ import DisplayAllApplicantsFromThePlatform from './components/jobAplicant/Displa
 import JobHunterProfilePage from './components/jobAplicant/JobHunterProfilePage';
 import DisplayAllJobsFromCompany from './components/companyComponents/DisplayAllJobsFromCompany';
 import Footer from './components/commonComponents/Footer';
-
-
+import TemplateData from './components/TemplateData';
 
 function App() {
  
@@ -42,6 +41,9 @@ function App() {
           <Route exact path='/all-aplicants' render={(props)=><DisplayAllApplicantsFromThePlatform {...props}/>}/>
           <Route exact path='/jobhunter-profile/:id' render={(props)=><JobHunterProfilePage {...props}/>}/>
           <Route exact path='/my-jobs' render={(props)=><DisplayAllJobsFromCompany {...props}/>}/>
+          <Switch>
+          <Route exact path='/cv' component={TemplateData} />
+          </Switch>
           {/* <Footer/> */}
       </div>
     </BrowserRouter>
