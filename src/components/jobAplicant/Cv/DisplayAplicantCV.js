@@ -13,15 +13,15 @@ const DisplayAplicantCV = () => {
                     <div className="">
                         <h1 className="text-gray-700 text-lg font-semibold"><i class="fas fa-graduation-cap"></i>Education</h1>
                         {/* aici mapez */}
-                        <h3 className="mx-12 text-lg text-xl font-semibold">Specialization</h3>
-                        <h3 className="mx-12 text-gray-700">Institution</h3>
-                        <h3 className="mx-12 text-gray-700">City</h3>
+                        <h3 className="mx-12 text-lg text-xl font-semibold">Computer Science</h3>
+                        <h3 className="mx-12 text-gray-700">Politehnica </h3>
+                        <h3 className="mx-12 text-gray-700">Bucuresti</h3>
                     </div>
                       {/* aici mapez */}
                     <div className="flex">
                         
-                        <h4>Start Date</h4>
-                        &#45;<h4>End Date</h4>
+                        <h4>01-04-2000</h4>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;<h4>12-06-2005</h4>
 
                     </div>
                 </div>
@@ -29,13 +29,13 @@ const DisplayAplicantCV = () => {
                     <div>
                           {/* aici mapez */}
                         <h1 className="text-gray-700 text-lg font-semibold"><i class="fas fa-user-tie"></i>Professional Experiance</h1>
-                        <h3 className='mx-12 text-lg text-xl font-semibold'>Job Name</h3>
-                        <h3 className="mx-12 text-gray-700">Company</h3>
+                        <h3 className='mx-12 text-lg text-xl font-semibold'>Senior Developer</h3>
+                        <h3 className="mx-12 text-gray-700">Apple</h3>
                     </div>
                       {/* aici mapez */}
                     <div className="flex">
-                        <h4>Start Date</h4>
-                        &#45;<h4>End Date</h4>
+                        <h4>02-05-2012</h4>
+                        &nbsp;&nbsp;-&nbsp;&nbsp;<h4>15-02-2021</h4>
 
                     </div>
                 </div>
@@ -43,7 +43,7 @@ const DisplayAplicantCV = () => {
                 <div>
                     <h1 className="text-gray-700 text-lg font-semibold"><i class="fas fa-language"></i>Foreign Langauges </h1>
                       {/* aici mapez */}
-                    <h4 className='mx-12 text-lg text-xl font-semibold'>Languages</h4>
+                    <h4 className='mx-12 text-lg text-xl font-semibold'>English</h4>
                 </div>
             </div>
         </div>

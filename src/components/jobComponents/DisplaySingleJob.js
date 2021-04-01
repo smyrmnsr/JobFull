@@ -10,7 +10,7 @@ const DisplaySingleJob = (props)=>{
     const{ match }= props;
     const{ params } = match;
     const{  companyId ,jobId}= params;
-    // console.log(props)
+    console.log(props)
 
 
     useEffect(()=>{
@@ -26,6 +26,7 @@ const DisplaySingleJob = (props)=>{
     },[])
 
     const item = singleJob;
+    console.log(item)
 
   
     const languages = item.languages;
@@ -52,14 +53,14 @@ const DisplaySingleJob = (props)=>{
             </div>
             <div className='detail  flex justify-between font-bold m-3 py-1 px-6    
                  rounded-2xl uppercase text-sm text-gray-500' >
-                <span>Work Location : {item.location}</span>
-                <span>Career Level: {item.level}</span>
-                <span>Education: {item.educationLevel}</span>
-                <span>Contract Type: {item.contract}</span>
-                <span>Department {item.role}</span>
-                <span>Programming Languages: {item.languages}</span>
-                <span>Technologies: {item.tools}</span>
-                <span>Date of posting: {item.postedAt}</span>
+                <span className="flex flex-col m-4">Work Location: {item.location}</span>
+                <span className="flex flex-col m-4">Career Level: {item.level}</span>
+                <span className="flex flex-col m-4">Education: {item.educationLevel}</span>
+                <span className="flex flex-col m-4">Contract Type: {item.contract}</span>
+                <span className="flex flex-col m-4">Department {item.role}</span>
+                <span className="flex flex-col m-4">Programming Languages: {item.languages && (item.languages).join(", ")}</span>
+                <span className="flex flex-col m-4">Technologies: {item.tools && (item.tools).join(", ")}</span>
+                <span className="flex flex-col m-4">Date of posting: {item.postedDate}</span>
             </div>
             <div className="text-gray-800 font-bold">
                 <h2>Ideal Canditate</h2>

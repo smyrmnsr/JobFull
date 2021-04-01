@@ -4,6 +4,7 @@ import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 import LOGO from "../../myhome.svg";
 
+
 const DisplayCompanyProfile = (props) => {
     const{ match }= props;
     const{ params } = match;
@@ -57,7 +58,7 @@ const DisplayCompanyProfile = (props) => {
                  rounded-2xl uppercase text-sm text-gray-500' >
        
          
-                <span><i className="fas fa-map-marker-alt"></i>{item.adress} </span>
+                <span><i className="fas fa-map-marker-alt"></i>{item.address} </span>
                 <a href="tel:+1123-456-7890"><i className="fas fa-phone-square-alt"></i>{item.phoneNumber}</a>
                 <a href="mailto:email@example.com"><i className="fas fa-envelope"></i> {item.email}</a>
                 <a href="#"><i className="fas fa-at"></i>{item.website}</a>

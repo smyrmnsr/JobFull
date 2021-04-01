@@ -2,6 +2,7 @@ import LOGO from "../../../myhome.svg";
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import BASE_URL from "../../../BASE_URL";
+import profilePic from '../../../profile-pic.png';
 
 const CvHeader = () => {
     const [aplicantContact, setaplicantContact] = useState()
@@ -28,7 +29,7 @@ const CvHeader = () => {
  		<div className={`flex  justify-between bg-blue-300 shadow-md my-16 mx-14 p-6 rounded border-l-4 border-black border-solid sm:flex-row sm:my-4`}>
 			
 			<div className='flex  '>
-				<img className='mt-16 mb-4 w-20 h-20 sm:h-24 sm:w-24 sm:my-0'src={LOGO} />
+				<img className='mt-16 mb-4 w-20 h-20 sm:h-24 sm:w-24 sm:my-0'src={profilePic} />
                 <div className='flex justify-between ml-4'>
                     <h2 className='font-bold text-xl my-2 my-auto'>{aplicantData.firstName} {aplicantData.lastName}</h2>
                 </div>

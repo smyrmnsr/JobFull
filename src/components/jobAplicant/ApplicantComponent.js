@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import profilePic from '../../profile-pic.png';
 const ApplicantComponent = ({
 	applicant: { id, firstName, lastName, phoneNumber, email, searchCriteria },
 	handleTagClick,
@@ -14,7 +14,7 @@ const ApplicantComponent = ({
 				<div>
 					<img
 						className='-mt-16 mb-4 w-20 h-20 sm:h-24 sm:w-24 sm:my-0'
-						src={`${''}`}
+						src={profilePic}
 						alt={firstName + ' ' + lastName}
 					/>
 				</div>

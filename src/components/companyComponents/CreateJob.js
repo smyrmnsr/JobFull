@@ -69,11 +69,11 @@ class CreateJob extends Component {
 									<div className='flex mb-4'>
 										<div className='w-1/2 mr-1'>
 											<input
-												className='bg-gray-200 appearance-none border rounded w-full py-2 px-3 text-grey-900'
-												name='location'
+												className='bg-gray-200 appearance-none border rounded w-full py-2 px-3 text-grey-darker'
+												name='name'
 												type='text'
 												defaultValue=''
-												placeholder='Job Location'
+												placeholder='Job Title'
 												required
 											/>
 										</div>
@@ -114,11 +114,11 @@ class CreateJob extends Component {
 										<div className='flex mb-4'>
 											<div className='w-1/2 mr-1'>
 												<input
-													className='bg-gray-200 appearance-none border rounded w-full py-2 px-3 text-grey-darker'
-													name='name'
+													className='bg-gray-200 appearance-none border rounded w-full py-2 px-3 text-grey-900'
+													name='location'
 													type='text'
 													defaultValue=''
-													placeholder='Name'
+													placeholder='Job Location'
 													required
 												/>
 											</div>
