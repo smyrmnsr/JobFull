@@ -14,6 +14,8 @@ import DisplayAllApplicants from './components/companyComponents/DisplayAllAppli
 import HomePage from './components/commonComponents/HomePage';
 import DisplayAllApplicantsFromThePlatform from './components/jobAplicant/DisplayAllAplicantsFromThePlatform';
 import JobHunterProfilePage from './components/jobAplicant/JobHunterProfilePage';
+import DisplayAllJobsFromCompany from './components/companyComponents/DisplayAllJobsFromCompany';
+import Footer from './components/commonComponents/Footer';
 
 
 
@@ -39,6 +41,8 @@ function App() {
           <Route exact path='/display-job' render={(props)=><DisplayAllJobs {...props}/>}/>
           <Route exact path='/all-aplicants' render={(props)=><DisplayAllApplicantsFromThePlatform {...props}/>}/>
           <Route exact path='/jobhunter-profile/:id' render={(props)=><JobHunterProfilePage {...props}/>}/>
+          <Route exact path='/my-jobs' render={(props)=><DisplayAllJobsFromCompany {...props}/>}/>
+          {/* <Footer/> */}
       </div>
     </BrowserRouter>
   );
