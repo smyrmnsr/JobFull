@@ -43,7 +43,7 @@ function App() {
           <Route exact path='/my-jobs' render={(props)=><DisplayAllJobsFromCompany {...props}/>}/>
 
           <Switch>
-          <Route exact path='/cv' component={TemplateData} />
+          <Route exact path='/create-cv' component={TemplateData} />
           </Switch>
 
           {/* <Footer/> */}
