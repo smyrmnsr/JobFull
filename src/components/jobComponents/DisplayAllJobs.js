@@ -69,7 +69,17 @@ const DisplayAllJobs = () => {
       },
     })
       .then((response) => {
-        setJobs(response.data)
+        if (response.data.length !== 0) setJobs(response.data);
+								else {
+									document.getElementById('search').placeholder = 'No results found';
+									document.getElementById('search').classList.add('placeholder-red-600');
+									setTimeout(() => {
+										document.getElementById('search').placeholder = 'Search';
+										document
+											.getElementById('search')
+											.classList.remove('placeholder-red-600');
+									}, 1000);
+								}
       })
       .catch((response) => {
         // TODO: handle error

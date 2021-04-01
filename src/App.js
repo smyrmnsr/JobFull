@@ -12,6 +12,9 @@ import MyCompanyAccount from './components/companyComponents/MyCompanyAccount';
 import CreateJob from './components/companyComponents/CreateJob';
 import DisplayAllApplicants from './components/companyComponents/DisplayAllApplicants';
 import HomePage from './components/commonComponents/HomePage';
+import DisplayAllApplicantsFromThePlatform from './components/jobAplicant/DisplayAllAplicantsFromThePlatform';
+import JobHunterProfilePage from './components/jobAplicant/JobHunterProfilePage';
+
 
 
 function App() {
@@ -34,6 +37,8 @@ function App() {
           <Route exact path='/add-job' render={(props)=><CreateJob {...props}/>}/>
           <Route exact path='/job-aplicants' render={(props)=><DisplayAllApplicants {...props}/>}/>
           <Route exact path='/display-job' render={(props)=><DisplayAllJobs {...props}/>}/>
+          <Route exact path='/all-aplicants' render={(props)=><DisplayAllApplicantsFromThePlatform {...props}/>}/>
+          <Route exact path='/jobhunter-profile/:id' render={(props)=><JobHunterProfilePage {...props}/>}/>
       </div>
     </BrowserRouter>
   );
