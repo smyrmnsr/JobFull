@@ -11,6 +11,7 @@ import UserRegistration from './components/jobAplicant/UserRegistration';
 import MyCompanyAccount from './components/companyComponents/MyCompanyAccount';
 import CreateJob from './components/companyComponents/CreateJob';
 import DisplayAllApplicants from './components/companyComponents/DisplayAllApplicants';
+import HomePage from './components/commonComponents/HomePage';
 
 
 function App() {
@@ -21,8 +22,8 @@ function App() {
 
           <Navbar/>
           {/* <AddJob/> */}
-         
-          <Route exact path='/' render={(props)=><DisplayAllJobs{...props}/>}/>
+        
+          <Route exact path='/' render={(props)=><HomePage{...props}/>}/>
           <Route exact path='/jobs/:jobId/:companyId' render={(props)=><DisplaySingleJob {...props}/>}/>
           <Route exact path='/my-account' render={(props)=><MyCompanyAccount {...props}/>}/>
           <Route exact path='/company/:companyId' render={(props)=><DisplayCompanyProfile {...props}/>}/> 
@@ -32,6 +33,7 @@ function App() {
           <Route exact path='/user-register' render={(props)=><UserRegistration {...props}/>}/>
           <Route exact path='/add-job' render={(props)=><CreateJob {...props}/>}/>
           <Route exact path='/job-aplicants' render={(props)=><DisplayAllApplicants {...props}/>}/>
+          <Route exact path='/display-job' render={(props)=><DisplayAllJobs {...props}/>}/>
       </div>
     </BrowserRouter>
   );
