@@ -11,7 +11,7 @@ const Navbar = () => {
                         <Link to='/'>.JobFull</Link>
                     </div>
                 </div>
-             
+
                     <ul className="flex space-x-6 items-center ">
                         <li> <Link to='/display-job'>Jobs</Link></li>
                         <li> <Link to='/all-aplicants'>Job Hunters</Link></li>
