@@ -17,6 +17,8 @@ import JobHunterProfilePage from './components/jobAplicant/JobHunterProfilePage'
 import DisplayAllJobsFromCompany from './components/companyComponents/DisplayAllJobsFromCompany';
 import Footer from './components/commonComponents/Footer';
 import TemplateData from './components/TemplateData';
+import DisplayJobHunterApplications from './components/jobAplicant/DisplayJobHunterApplications';
+import DisplayAplicantCV from './components/jobAplicant/Cv/DisplayAplicantCV';
 
 function App() {
  
@@ -41,6 +43,8 @@ function App() {
           <Route exact path='/all-aplicants' render={(props)=><DisplayAllApplicantsFromThePlatform {...props}/>}/>
           <Route exact path='/jobhunter-profile/:id' render={(props)=><JobHunterProfilePage {...props}/>}/>
           <Route exact path='/my-jobs' render={(props)=><DisplayAllJobsFromCompany {...props}/>}/>
+          <Route exact path='/my-job-aplications' render={(props)=><DisplayJobHunterApplications {...props}/>}/>
+          <Route exact path='/C.V/:id' render={(props)=><DisplayAplicantCV {...props}/>}/>
 
           <Switch>
           <Route exact path='/create-cv' component={TemplateData} />

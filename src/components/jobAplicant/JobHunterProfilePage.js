@@ -15,7 +15,7 @@ const JobHunterProfilePage = () => {
 										</li>
 										<li>
 											{' '}
-											<Link to='/my-jobs'>My Aplications</Link>
+											<Link to='/my-job-aplications'>My Aplications</Link>
 										</li>
 									</ul>
 								</div>

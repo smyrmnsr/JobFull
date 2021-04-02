@@ -10,7 +10,8 @@ const ApplicantComponent = ({
 		<div
 			className={`flex flex-col bg-white shadow-md my-16 mx-14 p-6 rounded sm:flex-row sm:my-4`}
 		>
-			<Link to={`/jobhunter/${id}`}>
+			{/* aici merge si cu id dinamic dar nu era nimic de afisat */}
+			<Link to={`/C.V/8741fb89-571f-48c0-b148-9b36c299b083`}>
 				<div>
 					<img
 						className='-mt-16 mb-4 w-20 h-20 sm:h-24 sm:w-24 sm:my-0'
@@ -21,7 +22,7 @@ const ApplicantComponent = ({
 			</Link>
 			<div className='flex flex-col justify-between ml-4'>
 				<h3 className='font-bold text-green-800'>
-					<Link to={`/jobhunter/${id}`}>{firstName + ' ' + lastName}</Link>
+					<Link to={`/C.V/8741fb89-571f-48c0-b148-9b36c299b083`}>{firstName + ' ' + lastName}</Link>
 				</h3>
 
 				<p className='text-gray-700'>{email} &#183;</p>

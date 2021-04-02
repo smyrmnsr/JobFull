@@ -18,8 +18,6 @@ const CvHeader = () => {
         fetchItems()
     },[])
 
-  
-    console.log(aplicantData)
 
     return ( 
         <>
