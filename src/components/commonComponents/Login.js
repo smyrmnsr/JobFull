@@ -1,39 +1,72 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Login = () => {
     return ( 
-  <>
-            <main className="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
-                <section>
-                    <h3 className="font-bold text-2xl">Welcome to .JobFull()</h3>
-                    <p className="text-gray-600 pt-2">Sign in to your account.</p>
-                </section>
-
-                <section className="mt-10">
-                    <form className="flex flex-col" method="POST" action="#">
-                        <div className="mb-6 pt-3 rounded bg-gray-200">
-                            <label className="block text-gray-700 text-sm font-bold mb-2 ml-3" for="email">Email</label>
-                            <input type="text" id="email" className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3"/>
-                        </div>
-                        <div className="mb-6 pt-3 rounded bg-gray-200">
-                            <label className="block text-gray-700 text-sm font-bold mb-2 ml-3" for="password">Password</label>
-                            <input type="password" id="password" className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3"/>
-                        </div>
-                        <div className="flex justify-end">
-                            <a href="#" className="text-sm text-purple-600 hover:text-purple-700 hover:underline mb-6">Forgot your password?</a>
-                        </div>
-                        <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" type="submit">Sign In</button>
+    <>
+        <div class="relative">
+        <img src="https://images.unsplash.com/photo-1616560091035-863cdf9e23e6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="absolute inset-0 object-cover w-full h-full" alt="" />
+        <div class="relative bg-gray-900 bg-opacity-80">
+            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div class="flex flex-col items-center justify-between xl:flex-row">
+                <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12">
+                <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
+                    The quick, brown fox <br class="hidden md:block" />
+                    jumps over a <span class="text-teal-accent-400">lazy dog</span>
+                </h2>
+                <p class="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudan, totam rem aperiam, eaque ipsa quae.
+                </p>
+                </div>
+                <div class="w-full max-w-xl xl:px-8 xl:w-5/12">
+                <div class="bg-white rounded shadow-2xl p-7 sm:p-10 bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm" >
+                    <h2 class="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
+                    Please Sign In
+                    </h2>
+                    <form
+                        className="flex flex-col" 
+                        method="POST" 
+                        action="#"
+                    >
+                    <div class="mb-1 sm:mb-2">
+                        <label for="email" class="inline-block mb-1 font-medium">E-mail</label>
+                        <input
+                        placeholder="email@email.com"
+                        required=""
+                        type="text"
+                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="email"
+                        name="email"
+                        />
+                    </div>
+                    <div class="mb-1 sm:mb-2">
+                        <label for="password" class="inline-block mb-1 font-medium">Password</label>
+                        <input
+                        placeholder="Enter your password"
+                        required=""
+                        type="text"
+                        class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
+                        id="password"
+                        name="password"
+                        />
+                    </div>
+                    <button 
+                        className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
+                        type="submit">
+                            Sign In
+                    </button>
                     </form>
-                </section>
-            </main>
-
-            <div className="max-w-lg mx-auto text-center mt-12 mb-6">
-                <p >Don't have an account? <Link to={"/register"} class="font-bold hover:underline">Sign up</Link>.</p>
+                    <div className="max-w-lg mx-auto text-center mt-12 mb-6">
+                        <p >Don't have an account? <NavLink to={"/register"} class="font-bold hover:underline" exact activeStyle={{color:'#E4FF1A'}}>Sign up</NavLink>.</p>
+                    </div>
+                </div>
+                </div>
             </div>
+            </div>
+        </div>
+        </div>
+    </>
 
-       </>
-
-     );
+    );
 }
- 
+
 export default Login;

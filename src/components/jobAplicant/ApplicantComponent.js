@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import profilePic from '../../profile-pic.png';
+
 const ApplicantComponent = ({
 	applicant: { id, firstName, lastName, phoneNumber, email, searchCriteria },
 	handleTagClick,
@@ -8,8 +9,7 @@ const ApplicantComponent = ({
 
 	return (
 		<div
-			className={`flex flex-col bg-white shadow-md my-16 mx-14 p-6 rounded sm:flex-row sm:my-4`}
-		>
+			className={`flex flex-col bg-white bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm shadow-md my-16 mx-14 p-6 rounded sm:flex-row sm:my-4`}>
 			<Link to={`/jobhunter/${id}`}>
 				<div>
 					<img
@@ -23,7 +23,6 @@ const ApplicantComponent = ({
 				<h3 className='font-bold text-green-800'>
 					<Link to={`/jobhunter/${id}`}>{firstName + ' ' + lastName}</Link>
 				</h3>
-
 				<p className='text-gray-700'>{email} &#183;</p>
 			</div>
 
@@ -36,7 +35,7 @@ const ApplicantComponent = ({
 							>
 								{tag}
 							</span>
-					  ))
+					))
 					: ''}
 			</div>
 		</div>
