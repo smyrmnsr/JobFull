@@ -181,24 +181,12 @@ class UserRegistration extends Component {
                 </div>
                 </div>
                 <div class="hidden lg:block relative w-full lg:w-1/2">
-                <div class="absolute inset-0 bg-gray-800 z-10 opacity-50"></div>
-                <img class="absolute inset-0 h-full ml-auto object-cover z-0" src="https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/>
-                <div class="absolute bottom-0 inset-x-0 mx-auto mb-12 max-w-xl text-center" style={{zIndex:10}}>
-                    <h2 class="mb-2 text-2xl text-white font-bold font-heading">So much more than a business analytics tool</h2>
-                    <div class="max-w-lg mx-auto mb-6">
-                    <p class="text-gray-300 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-                    </div>
-                    <a class="inline-block py-2 px-6 rounded-t-xl leading-loose rounded-l-xl bg-purple-600 hover:bg-purple-700 text-gray-50 font-bold transition duration-200" href="#">Get Started</a>
-                </div>
-                </div>
-                <div class="lg:hidden">
-                
-                <div 
-                    class="py-10 px-3 text-center" 
-                    style={{zIndex:10}}>
-                    <h2 class="mb-2 text-2xl font-bold">So much more than a business analytics tool</h2>
-                    <p class="mb-6 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
-                </div>
+                    <div class="absolute inset-0 bg-gray-800 z-10 opacity-50"></div>
+                    <img 
+                        class="absolute inset-0 h-full ml-auto object-cover z-0" 
+                        src="https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" 
+                        alt=""
+                    />
                 </div>
             </div>
         </section>

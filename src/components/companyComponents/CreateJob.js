@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BASE_URL from '../../BASE_URL';
 import axios from 'axios';
+import CompanySubMenu from './CompanySubMenu';
+
 
 function createPostedDate() {
 	let d = new Date();
@@ -54,8 +56,11 @@ class CreateJob extends Component {
 	render() {
 		return (
 			<>
+				
 				<main className="profile-page">
+				<CompanySubMenu/>
 				<section className="relative block" style={{ height: "500px" }}>
+					
 					<div
 					className="absolute top-0 w-full h-full bg-center bg-cover"
 					style={{

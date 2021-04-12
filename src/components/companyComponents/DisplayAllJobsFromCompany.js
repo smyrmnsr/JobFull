@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import BASE_URL from "../../BASE_URL";
 import axios from "axios";
 import DisplayActiveJobs from './DisplayActiveJobs';
+import CompanySubMenu from './CompanySubMenu';
 
 
 
@@ -28,6 +29,7 @@ const DisplayAllJobsFromCompany = () => {
             <div>
                 <h1 className="title-choose ">All Jobs</h1>
             </div>
+            <CompanySubMenu/>
 
             {           
                 (allJobs && allJobs.map((job,index) => (
