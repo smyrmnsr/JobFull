@@ -6,7 +6,6 @@ class UserRegistration extends Component {
     constructor(props) {
         super(props)
         this.state = {
-          //nu trebuie adaugat nimic.
         }
     }
     
@@ -15,143 +14,199 @@ class UserRegistration extends Component {
         const formData = new FormData(e.target)
         const body = {}
         formData.forEach((value, property) => body[property] = value)
-        //aici putem actualiza, elimina, adăuga valori / proprietăți în obiectul, e de folos dacă trebuie facut un proces de verificare, criptare date sau oriunde vrem.
+
         console.table(body)
-        // Request merge aici.
+
     axios({
         method: 'post',
         url: BASE_URL + '/jobhunter',
         data: body,
         headers: { 
-      'Access-Control-Allow-Origin': '*' },
-      })
+    'Access-Control-Allow-Origin': '*' },
+    })
         .then(function (response) {
           //handle success
-          console.log(response);
+        console.log(response);
         })
         .catch(function (response) {
           //handle error
-          console.log(response);
+        console.log(response);
         });
-      console.table(body);
-      // Request merge aici.
+    console.table(body);
     }
 
     render() {  
     return ( 
     <>
-            <main className="bg-white max-w-lg mx-auto p-8 md:p-12 my-10 rounded-lg shadow-2xl">
-                <section>
-                    <h3 className="font-bold text-2xl">Welcome to .JobFull()</h3>
-                    <p className="text-gray-600 pt-2">Please fill in the form to register.</p>
-                </section>
 
-                <section className="mt-10">
+        <section class='bg-gray-300 '>
+            <div class="flex flex-wrap">
+                <div class="pt-6 lg:pt-16 pb-6 w-full lg:w-1/2">
+                <div class="max-w-md mx-auto">
+                    <div 
+                        class="mb-6 lg:mb-20 w-full px-3 flex items-center justify-between">
+                            <a 
+                                class="text-3xl font-bold leading-none" 
+                                href="#">
+                                    <img 
+                                        class="h-12" 
+                                        src="atis-assets/logo/atis/atis-mono-black.svg" 
+                                        alt="" 
+                                        width="auto"
+                                    />
+                            </a>
+                            <a 
+                                class="py-2 px-6 text-xs rounded-l-xl rounded-t-xl text-green-600 font-bold transition duration-200" 
+                                href="#">
+                            </a>
+                    </div>
+                    <div>
+                    <div class="mb-6 px-3">
+                        <span class="text-gray-500">Welcome to .JobFull</span>
+                        <h3 class="text-2xl font-bold">Create an account</h3>
+                    </div>
                     <form onSubmit={e => this.onSubmitForm(e)} 
-                        className="flex flex-col" 
-                        method="POST" 
-                        action="#"
-                    >
-                        <div className="mb-6 pt-3 rounded bg-gray-200">
-                            <label 
-                                className="block text-gray-700 text-sm font-bold mb-2 ml-3" 
-                                for="firstName"
-                            >   
-                                First Name
-                            </label>
+                            className="flex flex-col" 
+                            method="POST" 
+                            action="#">
+                        <div class="flex flex-wrap">
+                        <div class="mb-3 w-full lg:w-1/2 px-2">
                             <input 
+                                class="w-full p-4 text-xs bg-gray-50 outline-none rounded" 
                                 type="text" 
                                 name="firstName" 
-                                defaultValue="" 
-                                className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
-                                required
+                                required placeholder="First Name"
                             />
                         </div>
-                        <div className="mb-6 pt-3 rounded bg-gray-200">
-                            <label 
-                                className="block text-gray-700 text-sm font-bold mb-2 ml-3" 
-                                for="lastName"
-                            >
-                                Last Name
-                            </label>
+                        <div class="mb-3 w-full lg:w-1/2 px-2">
                             <input 
+                                class="w-full p-4 text-xs bg-gray-50 outline-none rounded" 
                                 type="text" 
                                 name="lastName" 
-                                defaultValue="" 
-                                className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
-                                required
+                                required 
+                                placeholder="Last Name"
                             />
                         </div>
-                        <div className="mb-6 pt-3 rounded bg-gray-200">
-                            <label 
-                                className="block text-gray-700 text-sm font-bold mb-2 ml-3" 
-                                for="email"
-                            >
-                                Email
-                            </label>
-                            <input 
-                                type="email" 
-                                name="email" 
-                                defaultValue="" 
-                                className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
-                                required
-                            />
                         </div>
-                        <div className="mb-6 pt-3 rounded bg-gray-200">
-                            <label 
-                                className="block text-gray-700 text-sm font-bold mb-2 ml-3" 
-                                for="password"
-                            >
-                                Password
-                            </label>
+                        <div class="mb-3 flex p-4 mx-2 bg-gray-50 rounded">
+                        <input 
+                            class="w-full text-xs bg-gray-50 outline-none" 
+                            type="email"
+                            name="email" 
+                            placeholder="name@email.com"
+                            required
+                        />
+                        <svg 
+                            class="h-6 w-6 ml-4 my-auto text-gray-300" 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke="currentColor">
+                            <path 
+                                stroke-linecap="round" 
+                                stroke-linejoin="round" 
+                                stroke-width="2" 
+                                d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207">                                   
+                            </path>
+                        </svg>
+                        </div>
+                        <div class="mb-6 flex p-4 mx-2 bg-gray-50 rounded">
                             <input 
+                                class="w-full text-xs bg-gray-50 outline-none" 
                                 type="password" 
-                                name="password" 
-                                defaultValue="" 
-                                className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
-                                required
+                                placeholder="Enter your password"
                             />
-                        </div>
-                        <div className="mb-6 pt-3 rounded bg-gray-200">
-                            <label 
-                            className="block text-gray-700 text-sm font-bold mb-2 ml-3" 
-                            for="retype_password"
-                            >
-                                Retype Password
-                            </label>
-                            <input 
-                                type="password" 
-                                name="retype_password" 
-                                defaultValue="" 
-                                className="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-purple-600 transition duration-500 px-3 pb-3" 
-                                required
-                            />
-                        </div>
-                        <div className="flex justify-end">
-                            <a href="#" 
-                                className="text-sm text-purple-600 hover:text-purple-700 hover:underline mb-6"
-                            >
-                                Forgot your password?
-                            </a>
-                        </div>
-                        <button 
-                            className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200" 
-                            type="submit"
-                            >
-                                Create Account
+                        <button>
+                            <svg 
+                                class="h-6 w-6 ml-4 my-auto text-gray-300" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor">
+                                <path 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    stroke-width="2" 
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                                </path>
+                                <path 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    stroke-width="2" 
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                </path>
+                            </svg>
                         </button>
+                        </div>
+                        <div class="mb-6 flex p-4 mx-2 bg-gray-50 rounded">
+                            <input 
+                                class="w-full text-xs bg-gray-50 outline-none" 
+                                type="password" 
+                                placeholder="Retype your password"
+                            />
+                        <button>
+                            <svg 
+                                class="h-6 w-6 ml-4 my-auto text-gray-300" 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                fill="none" 
+                                viewBox="0 0 24 24" 
+                                stroke="currentColor">
+                                <path 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    stroke-width="2" 
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                                </path>
+                                <path 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round" 
+                                    stroke-width="2" 
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                </path>
+                            </svg>
+                        </button>
+                        </div>
+                        <div class="px-3 text-center">
+                        <button class="mb-2 w-full py-4 bg-purple-600 hover:bg-purple-700 rounded text-sm font-bold text-gray-50 transition duration-200" type="submit">Sign Up</button>
+                        <span class="text-gray-400 text-xs">
+                            <span>Already have an account? <Link to={"/login"} class="font-bold hover:underline text-gray-800">Sign in</Link>.</span>
+                        </span>
+                        <p class="mt-16 text-xs text-gray-400"><a class="underline hover:text-gray-500" href="#">
+                            <Link to={'/privacy-policy'} className='hover:underline text-gray-800'>Privacy Policy  </Link></a> 
+                            and <a class="underline hover:text-gray-500" href="#">
+                            <Link to={'/terms-of-use'} className='hover:underline text-gray-800'>Terms Of Use</Link></a></p>
+                        </div>
                     </form>
-                </section>
-            </main>
-
-            <div className="max-w-lg mx-auto text-center mt-12 mb-6">
-                <p >Already have an account? <Link to={"/login"} class="font-bold hover:underline">Sign in</Link>.</p>
+                    </div>
+                </div>
+                </div>
+                <div class="hidden lg:block relative w-full lg:w-1/2">
+                <div class="absolute inset-0 bg-gray-800 z-10 opacity-50"></div>
+                <img class="absolute inset-0 h-full ml-auto object-cover z-0" src="https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt=""/>
+                <div class="absolute bottom-0 inset-x-0 mx-auto mb-12 max-w-xl text-center" style={{zIndex:10}}>
+                    <h2 class="mb-2 text-2xl text-white font-bold font-heading">So much more than a business analytics tool</h2>
+                    <div class="max-w-lg mx-auto mb-6">
+                    <p class="text-gray-300 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                    </div>
+                    <a class="inline-block py-2 px-6 rounded-t-xl leading-loose rounded-l-xl bg-purple-600 hover:bg-purple-700 text-gray-50 font-bold transition duration-200" href="#">Get Started</a>
+                </div>
+                </div>
+                <div class="lg:hidden">
+                
+                <div 
+                    class="py-10 px-3 text-center" 
+                    style={{zIndex:10}}>
+                    <h2 class="mb-2 text-2xl font-bold">So much more than a business analytics tool</h2>
+                    <p class="mb-6 text-gray-500 leading-loose">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                </div>
+                </div>
             </div>
+        </section>
 
     </>
 
-  );
-  }
+    );
+    }
 }
 
 export default UserRegistration;

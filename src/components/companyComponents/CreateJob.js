@@ -49,19 +49,39 @@ class CreateJob extends Component {
 			});
 		console.table(body);
 	};
+	
 
 	render() {
 		return (
 			<>
-				<section className='mt-10'>
-					<form
+				<main className="profile-page">
+				<section className="relative block" style={{ height: "500px" }}>
+					<div
+					className="absolute top-0 w-full h-full bg-center bg-cover"
+					style={{
+						backgroundImage:
+						"url('https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80')"
+					}}
+					>
+					<span
+						id="blackOverlay"
+						className="w-full h-full absolute opacity-50 bg-black"
+					></span>
+					</div>
+					
+				</section>
+				<section className="relative py-16 bg-gray-300">
+					<div className="container mx-auto px-4 ">
+					<div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+						<div className="">
+						
+						<form
 						onSubmit={(e) => this.onSubmitForm(e)}
 						className='flex flex-col'
 						method='POST'
-						action='#'
-					>
-						<div className='container mx-auto py-8'>
-							<div className='w-3/4 mx-auto bg-white rounded shadow'>
+						action='#'>
+						<div className=''>
+							<div className='w-full mx-auto rounded shadow-2xl'>
 								<div className='text-center py-4 px-8 text-black text-xl border-b border-grey-lighter'>
 									Please fill in the form to create a job opening
 								</div>
@@ -159,7 +179,9 @@ class CreateJob extends Component {
 									</div>
 									<div className='mb-4'>
 										<div>
-											<label class='block text-sm font-medium text-gray-700' for='bio'>
+											<label 
+												class='block text-sm font-medium text-gray-700' 
+												for='bio'>
 												Ideal Candidate
 											</label>
 											<textarea
@@ -171,7 +193,9 @@ class CreateJob extends Component {
 									</div>
 									<div className='mb-4'>
 										<div>
-											<label class='block text-sm font-medium text-gray-700' for='bio'>
+											<label 
+												class='block text-sm font-medium text-gray-700' 
+												for='bio'>
 												Job Description
 											</label>
 											<textarea
@@ -183,15 +207,18 @@ class CreateJob extends Component {
 									</div>
 									<button
 										className='w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200'
-										type='submit'
-									>
+										type='submit'>
 										Create Job
 									</button>
 								</div>
 							</div>
 						</div>
 					</form>
+						</div>
+					</div>
+					</div>
 				</section>
+				</main>
 			</>
 		);
 	}

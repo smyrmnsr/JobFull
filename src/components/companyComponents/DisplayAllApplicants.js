@@ -11,7 +11,6 @@ const DisplayAllApplicants = (props)=> {
         const fetchItems = async()=>{
             const response = await axios(BASE_URL + `/jobs/6d7b7811-1190-4319-8e48-6d459a1da38d/applicants`)
             const data = response.data;
-            // console.log(data);
             setApplicants(data);
             
         }

@@ -5,6 +5,7 @@ import DisplayAplicantCV from './Cv/DisplayAplicantCV';
 const JobHunterProfilePage = () => {
     return (
 					<>
+{/* <<<<<<< HEAD
 						<nav className='secondary-nav'>
 							<div className='px-12 mx-auto py-5'>
 								<div className='flex justify-between'>
@@ -21,6 +22,8 @@ const JobHunterProfilePage = () => {
 								</div>
 							</div>
 						</nav>
+=======
+>>>>>>> origin/newFrontUi */}
 						<DisplayAplicantCV />
 					</>
 				);
