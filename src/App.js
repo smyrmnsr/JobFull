@@ -17,10 +17,10 @@ import JobHunterProfilePage from './components/jobAplicant/JobHunterProfilePage'
 import DisplayAllJobsFromCompany from './components/companyComponents/DisplayAllJobsFromCompany';
 import Footer from './components/commonComponents/Footer';
 import TemplateData from './components/TemplateData';
-<<<<<<< HEAD
+
 import DisplayJobHunterApplications from './components/jobAplicant/DisplayJobHunterApplications';
 import DisplayAplicantCV from './components/jobAplicant/Cv/DisplayAplicantCV';
-=======
+
 import PrivacyPolicy from './components/footerComponents/PrivacyPolicy';
 import SecurityPolicy from './components/footerComponents/SecurityPolicy';
 import Cookies from './components/footerComponents/Cookies';
@@ -30,7 +30,7 @@ import AboutUs from './components/footerComponents/AboutUs';
 import ContactUs from './components/footerComponents/ContactUs';
 import Publisher from './components/footerComponents/Publisher';
 
->>>>>>> origin/newFrontUi
+
 
 function App() {
  

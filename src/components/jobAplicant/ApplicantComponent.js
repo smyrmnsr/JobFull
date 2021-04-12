@@ -16,7 +16,7 @@ const ApplicantComponent = ({
 // 			<Link to={`/C.V/8741fb89-571f-48c0-b148-9b36c299b083`}>
 // =======
 			className={`flex flex-col bg-white bg-opacity-60 bg-clip-padding backdrop-filter backdrop-blur-sm shadow-md my-16 mx-14 p-6 rounded sm:flex-row sm:my-4`}>
-			<Link to={`/jobhunter/${id}`}>
+			<Link to={`/C.V/8741fb89-571f-48c0-b148-9b36c299b083`}>
 {/* >>>>>>> origin/newFrontUi */}
 				<div>
 					<img
