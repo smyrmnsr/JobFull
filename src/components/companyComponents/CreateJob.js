@@ -58,7 +58,6 @@ class CreateJob extends Component {
 			<>
 				
 				<main className="profile-page">
-				<CompanySubMenu/>
 				<section className="relative block" style={{ height: "500px" }}>
 					
 					<div
@@ -70,8 +69,8 @@ class CreateJob extends Component {
 					>
 					<span
 						id="blackOverlay"
-						className="w-full h-full absolute opacity-50 bg-black"
-					></span>
+						className="w-full h-full absolute opacity-50 bg-black">	
+						</span>
 					</div>
 					
 				</section>
@@ -86,6 +85,7 @@ class CreateJob extends Component {
 						method='POST'
 						action='#'>
 						<div className=''>
+						<CompanySubMenu/>
 							<div className='w-full mx-auto rounded shadow-2xl'>
 								<div className='text-center py-4 px-8 text-black text-xl border-b border-grey-lighter'>
 									Please fill in the form to create a job opening

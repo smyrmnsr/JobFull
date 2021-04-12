@@ -38,7 +38,7 @@ const ApplicantComponent = ({
 					? tags.map((tag) => (
 							<span
 								onClick={() => handleTagClick(tag)}
-								className='cursor-pointer text-blue-400 bg-gray-200 font-bold mr-4 mb-4 p-2 rounded sm:mb-0'
+								className='cursor-pointer text-purple-400 bg-gray-200 font-bold mr-4 mb-4 p-2 rounded sm:mb-0'
 							>
 								{tag}
 							</span>

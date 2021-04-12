@@ -93,7 +93,7 @@ const JobBoardComponent = ({
 										<span
 											onClick={() => handleTagClick(tag)}
 											className='cursor-pointer 
-                text-blue-400 bg-gray-200 
+                text-purple-500 bg-gray-200 
                 font-bold mr-4 mb-4 p-2 
                 rounded sm:mb-0'
 										>

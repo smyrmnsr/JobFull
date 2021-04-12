@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react';
 import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 import LOGO from '../../myhome.svg';
+import { Link, NavLink } from 'react-router-dom';
 
 const CompanyProfile = (props) => {
     const{ match }= props;
@@ -80,7 +81,14 @@ const CompanyProfile = (props) => {
                           type="button"
                           style={{ transition: "all .15s ease" }}
                         >
-                          Connect
+                          <Link to='/add-job'>Add Job</Link>
+                        </button>
+                        <button
+                          className="bg-purple-500 active:bg-pink-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
+                          type="button"
+                          style={{ transition: "all .15s ease" }}
+                        >
+                          <Link to='/my-jobs'>All Jobs</Link>
                         </button>
                       </div>
                     </div>

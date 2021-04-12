@@ -128,7 +128,7 @@ const Profile = () => {
                                 <div className="flex justify-center">
                             <h1 className='my-auto mr-8 font-bold text-xl my-2 my-auto'>Skills</h1>
                                 {aplicantData.searchCriteria.map((item, index)=>(
-                            <div className='cursor-pointer text-blue-400 bg-gray-200 font-bold mr-4 mb-4 p-2 rounded sm:mb-0'>
+                            <div className='cursor-pointer text-purple-400 bg-gray-200 font-bold mr-4 mb-4 p-2 rounded sm:mb-0'>
                                 {item}
                             </div>
                         ))}                       
