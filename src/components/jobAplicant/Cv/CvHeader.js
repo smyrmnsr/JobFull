@@ -1,8 +1,8 @@
-import LOGO from "../../../myhome.svg";
+
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import BASE_URL from "../../../BASE_URL";
-import profilePic from '../../../profile-pic.png';
+import profilePic from '../../../images/profile-pic.png';
 
 const CvHeader = () => {
     const [aplicantContact, setaplicantContact] = useState()

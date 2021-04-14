@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import JobBoardComponent from './JobBoardComponent';
 import BASE_URL from '../../BASE_URL';
 import axios from 'axios';
-import Loading from "../../Ripple-1s-200px.svg";
+import Loading from "../../images/Ripple-1s-200px.svg";
 
 const DisplayAllJobs = () => {
 

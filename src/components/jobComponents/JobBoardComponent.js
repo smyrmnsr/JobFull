@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LOGO from "../../myhome.svg";
+import LOGO from "../../images/myhome.svg";
 
 
 const JobBoardComponent = ({ 

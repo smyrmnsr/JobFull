@@ -1,8 +1,8 @@
-import LOGO from "../../../myhome.svg";
+
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import BASE_URL from "../../../BASE_URL";
-import profilePic from '../../../profile-pic.png';
+import profilePic from '../../../images/profile-pic.png';
 import { Link } from 'react-router-dom';
 
 const Profile = () => {
@@ -73,7 +73,7 @@ const Profile = () => {
                                 <div className="relative">
                                 <img
                                     alt="..."
-                                    src={require("../../../profile-pic.png").default}
+                                    src={require("../../../images/profile-pic.png").default}
                                     className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
                                     style={{ maxWidth: "150px" }}
                                 />

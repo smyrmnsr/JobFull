@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import profilePic from '../../profile-pic.png';
+import profilePic from '../../images/profile-pic.png';
 
 const ApplicantComponent = ({
 	applicant: { id, firstName, lastName, phoneNumber, email, searchCriteria },

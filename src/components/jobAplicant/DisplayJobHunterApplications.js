@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import BASE_URL from '../../BASE_URL';
 import axios from 'axios';
-import LOGO from '../../myhome.svg';
 import GetJobsAppliedTo from './GetJobsAppliedTo';
 
 

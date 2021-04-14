@@ -2,7 +2,7 @@
 import {useState, useEffect} from 'react';
 import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
-import LOGO from '../../myhome.svg';
+import LOGO from '../../images/myhome.svg';
 import { Link, NavLink } from 'react-router-dom';
 
 const CompanyProfile = (props) => {

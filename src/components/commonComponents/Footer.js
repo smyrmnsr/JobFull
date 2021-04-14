@@ -10,7 +10,7 @@ const Footer = () => {
 					<div className="relative pt-16 px-20">
 						<img
 							alt="..."
-							src={require("../../racheta.jpg").default}
+							src={require("../../images/racheta.jpg").default}
 							className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
 							style={{ maxWidth: "150px" }}
 						/>

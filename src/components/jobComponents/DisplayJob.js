@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
-import LOGO from "../../myhome.svg";
+import LOGO from "../../images/myhome.svg";
 
 const DisplayJob = (props)=>{
     const [singleJob, setSingleJob] = useState([]);
