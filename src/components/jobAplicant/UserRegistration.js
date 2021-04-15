@@ -10,8 +10,6 @@ const UserRegistration = () => {
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [successful, setSuccessful] = useState(false);
-    const [message, setMessage] = useState("");
     const [city, setCity] = useState("");
     const [contactNumber, setPhoneNumber] = useState("");
     const [dateOfBirth, setDetOfBirth] = useState("");
@@ -46,8 +44,8 @@ const UserRegistration = () => {
       };
 
     const onChangePhoneNumber = (e) => {
-        const phoneNumber = e.target.value;
-        setPhoneNumber(phoneNumber);
+        const contactNumber = e.target.value;
+        setPhoneNumber(contactNumber);
       };
 
 
@@ -57,26 +55,26 @@ const UserRegistration = () => {
         e.preventDefault()
 
 
-        axios.all([
-           axios.post("http://localhost:8080/api/v1/registration/signup",{
-                email,
-                password,
-               contactNumber,
-               city,
-               role
-             
+            axios.all([
+            axios.post("http://localhost:8080/api/v1/registration/signup",{
+                    email,
+                    password,
+                contactNumber,
+                city,
+                role
+                
 
-           }),
-           axios.post("http://localhost:8080/api/v1/jobhunter",{
-           firstName,
-            lastName,
+            }),
+            axios.post("http://localhost:8080/api/v1/jobhunter",{
+                firstName,
+                lastName,
 
-        }),
-          ])
-          .then(axios.spread((req1, req2) => {
-            // output of req.
-            console.log(req1, req2)
-          }));
+            }),
+            ])
+            .then(axios.spread((req1, req2) => {
+                // output of req.
+                console.log(req1, req2)
+            }));
     }
 
 
@@ -86,7 +84,7 @@ const UserRegistration = () => {
         <section class='bg-gray-300 '>
                     <div class="flex flex-wrap">
                         <div class="pt-6 lg:pt-16 pb-6 w-full lg:w-1/2">
-                       <div class="max-w-md mx-auto">
+                        <div class="max-w-md mx-auto">
                             <div 
                                 class="mb-6 lg:mb-20 w-full px-3 flex items-center justify-between">
                                     <a 
@@ -109,7 +107,7 @@ const UserRegistration = () => {
                                 <span class="text-gray-500">Welcome to .JobFull</span>
                                 <h3 class="text-2xl font-bold">Create an account</h3>
                             </div>
-                            <form onSubmit={handleRegister } 
+                            <form onSubmit={handleRegister} 
                                     className="flex flex-col" 
                                     method="POST" 
                                     action="#">

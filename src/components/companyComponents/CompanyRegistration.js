@@ -1,44 +1,99 @@
-import React, { Component } from 'react';
+import React, { Component,useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
+import authService from '../../services/auth.service';
 
-class CompanyRegistration extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        //no needed.
-        };
-    }
+const CompanyRegistration = () => {
+    
+    const [name, setName] = useState("");
+    const [cui, setCui] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [j, setJ] = useState("");
+    const [address, setAddress] = useState("");
+    const [city, setCity] = useState("");
+    const [phone_number, setPhoneNumber] = useState("");
+    const [country, setCountry] = useState("");
+    const [role, setRole] = useState("COMPANY");
 
-    onSubmitForm = (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const body = {};
-        formData.forEach((value, property) => (body[property] = value));
-        //aici putem actualiza, elimina, adăuga valori / proprietăți în obiectul, e de folos dacă trebuie facut un proces de verificare, criptare date sau oriunde vrem.
-        console.table(body)
-
-        axios({
-        method: 'post',
-        url: BASE_URL + '/companies',
-        data: body,
-        headers: { 
-        'Access-Control-Allow-Origin': '*' },
-        })
-        .then(function (response) {
-            //handle success
-            console.log(response);
-        })
-        .catch(function (response) {
-            //handle error
-            console.log(response);
-        });
-        console.table(body);
-        // Request merge aici.
+    const onChangeName = (e) => {
+        const name = e.target.value;
+        setName(name);
     };
 
-  render() {
+    const onChangeAddress = (e) => {
+        const address = e.target.value;
+        setAddress(address);
+    };
+
+    const onChangeJ = (e) => {
+        const j = e.target.value;
+        setJ(j);
+    };
+
+    const onChangeCui = (e) => {
+        const cui = e.target.value;
+        setCui(cui);
+    };
+
+
+    const onChangeEmail = (e) => {
+        const email = e.target.value;
+        setEmail(email);
+      };
+
+    
+    const onChangeCity = (e) => {
+        const city = e.target.value;
+        setCity(city);
+      };
+
+      const onChangeCountry = (e) => {
+        const country = e.target.value;
+        setCountry(country);
+      };
+
+    const onChangePassword = (e) => {
+        const password = e.target.value;
+        setPassword(password);
+      };
+
+    const onChangephone_number = (e) => {
+        const phone_number = e.target.value;
+        setPhoneNumber(phone_number);
+      };
+
+
+    const handleRegister=(e)=>{
+        e.preventDefault()
+
+
+            axios.all([
+            axios.post("http://localhost:8080/api/v1/registration/signup",{
+                email,
+                password,
+                phone_number,
+                city,
+                country,
+                role
+                
+
+            }),
+            axios.post("http://localhost:8080/api/v1/companies",{
+                name,
+                j,
+                cui,
+                city
+            }),
+            ])
+            .then(axios.spread((req1, req2) => {
+                // output of req.
+                console.log(req1, req2)
+            }));
+
+    }
+
     return (
       <>
         <section class='bg-gray-300 '>
@@ -51,7 +106,7 @@ class CompanyRegistration extends Component {
                         <span class="text-gray-500">Welcome to .JobFull</span>
                         <h3 class="text-2xl font-bold">Create an account</h3>
                     </div>
-                    <form onSubmit={e => this.onSubmitForm(e)} 
+                    <form onSubmit={handleRegister} 
                             className="flex flex-col " 
                             method="POST" 
                             action="#">
@@ -59,8 +114,9 @@ class CompanyRegistration extends Component {
                             <input 
                                 class="w-full text-xs bg-gray-200 outline-none" 
                                 type="text"
-                                name="companyName" 
+                                name="name" 
                                 placeholder="Company Name"
+                                onChange={onChangeName}
                                 required
                         />
                         </div>
@@ -69,51 +125,60 @@ class CompanyRegistration extends Component {
                             <input 
                                 class="w-full p-4 text-xs bg-gray-200 outline-none rounded" 
                                 type="text" 
-                                name="firstName" 
-                                required placeholder="Unique Registratin Code"
+                                name="cui" 
+                                
+                                placeholder="Unique Registratin Code"
+                                onChange={onChangeCui}
                             />
                         </div>
                         <div class="mb-3 w-full lg:w-1/2 px-2">
                             <input 
                                 class="w-full p-4 text-xs bg-gray-200 outline-none rounded" 
                                 type="text" 
-                                name="lastName" 
-                                required 
+                                name="j" 
+                                
                                 placeholder="Trade Register Serial Number"
+                                onChange={onChangeJ}
                             />
                         </div>
                         <div class="mb-3 w-full lg:w-1/2 px-2">
                             <input 
                                 class="w-full p-4 text-xs bg-gray-200 outline-none rounded" 
                                 type="text" 
-                                name="firstName" 
-                                required placeholder="Street and Number"
+                                name="address" 
+                                
+                                placeholder="Street and Number"
+                                onChange={onChangeAddress}
                             />
                         </div>
                         <div class="mb-3 w-full lg:w-1/2 px-2">
                             <input 
                                 class="w-full p-4 text-xs bg-gray-200 outline-none rounded" 
                                 type="text" 
-                                name="lastName" 
-                                required 
+                                name="phone_number" 
+                                
                                 placeholder="Phone Number"
+                                onChange={onChangephone_number}
                             />
                         </div>
                         <div class="mb-3 w-full lg:w-1/2 px-2">
                             <input 
                                 class="w-full p-4 text-xs bg-gray-200 outline-none rounded" 
                                 type="text" 
-                                name="firstName" 
-                                required placeholder="City"
+                                name="city" 
+                                
+                                placeholder="City"
+                                onChange={onChangeCity}
                             />
                         </div>
                         <div class="mb-3 w-full lg:w-1/2 px-2">
                             <input 
                                 class="w-full p-4 text-xs bg-gray-200 outline-none rounded" 
                                 type="text" 
-                                name="lastName" 
-                                required 
+                                name="country" 
+                                
                                 placeholder="Country"
+                                onChange={onChangeCountry}
                             />
                         </div>
                         </div>
@@ -125,6 +190,7 @@ class CompanyRegistration extends Component {
                             name="email" 
                             placeholder="name@email.com"
                             required
+                            onChange={onChangeEmail}
                         />
                         <svg 
                             class="h-6 w-6 ml-4 my-auto text-gray-300" 
@@ -145,6 +211,7 @@ class CompanyRegistration extends Component {
                                 class="w-full text-xs bg-gray-200 outline-none" 
                                 type="password" 
                                 placeholder="Enter your password"
+                                onChange={onChangePassword}
                             />
                         <button>
                             <svg 
@@ -245,7 +312,6 @@ class CompanyRegistration extends Component {
         </section>
     </>
     );
-  }
-}
 
+}
 export default CompanyRegistration;

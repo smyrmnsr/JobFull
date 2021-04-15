@@ -1,6 +1,35 @@
+import React, { useState, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
+import BASE_URL from "../../BASE_URL";
+import axios from 'axios';
+import authService from '../../services/auth.service';
 
 const Login = () => {
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const onChangeEmail = (e) => {
+        const email = e.target.value;
+        setEmail(email);
+    };
+
+    const onChangePassword = (e) => {
+        const password = e.target.value;
+        setPassword(password);
+    };
+
+    const handleLogin=(e)=>{
+        e.preventDefault()
+
+
+            
+            axios.post("http://localhost:8080/api/v1/login",{
+                    email,
+                    password              
+            })
+
+    }
     return ( 
     <>
         <div class="relative">
@@ -19,7 +48,7 @@ const Login = () => {
                     <h2 class="mb-4 text-xl font-semibold sm:text-center sm:mb-6 sm:text-2xl">
                     Please Sign In
                     </h2>
-                    <form
+                    <form onSubmit= { handleLogin }
                         className="flex flex-col" 
                         method="POST" 
                         action="#"
@@ -32,7 +61,8 @@ const Login = () => {
                         type="text"
                         class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="email"
-                        name="email"
+                        name="username"
+                        onChange={onChangeEmail}
                         />
                     </div>
                     <div class="mb-1 sm:mb-2">
@@ -44,6 +74,7 @@ const Login = () => {
                         class="flex-grow w-full h-12 px-4 mb-2 transition duration-200 bg-white border border-gray-300 rounded shadow-sm appearance-none focus:border-deep-purple-accent-400 focus:outline-none focus:shadow-outline"
                         id="password"
                         name="password"
+                        onChange={onChangePassword}
                         />
                     </div>
                     <button 
