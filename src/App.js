@@ -38,10 +38,10 @@ function App() {
     <BrowserRouter>
       <div className=" shadow-lg App">
 
-          <Navbar/>
+          <Navbar/> 
           {/* <AddJob/> */}
         
-          <Route exact path='/' render={(props)=><HomePage{...props}/>}/>
+          <Route exact path='/' render={(props)=><HomePage {...props}/>}/>
           <Route exact path='/jobs/:jobId/:companyId' render={(props)=><DisplayJob {...props}/>}/>
           <Route exact path='/my-account' render={(props)=><MyCompanyAccount {...props}/>}/>
           <Route exact path='/company/:companyId' render={(props)=><CompanyProfile {...props}/>}/> 

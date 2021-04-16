@@ -4,7 +4,7 @@ import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 import authService from '../../services/auth.service';
 
-const Login = () => {
+const Login = (props) => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -19,8 +19,8 @@ const Login = () => {
         setPassword(password);
     };
 
-    const handleLogin=(e)=>{
-        e.preventDefault()
+    const handleLogin=()=>{
+        props.history.push('/jobhunter-profile/8741fb89-571f-48c0-b148-9b36c299b083');
 
 
             

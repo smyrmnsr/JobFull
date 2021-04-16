@@ -5,10 +5,14 @@ import BASE_URL from "../../../BASE_URL";
 import profilePic from '../../../images/profile-pic.png';
 import { Link } from 'react-router-dom';
 
-const Profile = () => {
+const Profile = (props) => {
     const [aplicantContact, setaplicantContact] = useState()
     const aplicantData = aplicantContact;
     
+    const handleLogout = () => {
+        props.history.push('/login');
+    }
+
     useEffect(()=>{
         const fetchItems = async()=>{
             const response = await axios(BASE_URL + `/jobhunter/8741fb89-571f-48c0-b148-9b36c299b083`)
@@ -100,6 +104,15 @@ const Profile = () => {
                                     {' '}
                                         <Link to='/my-jobs'>My Aplications</Link>
                                     </li>
+                                </button>
+                                <button
+                                    className="bg-purple-500 active:bg-purple-600 uppercase text-white font-bold hover:shadow-md shadow text-xs px-4 py-2 rounded outline-none focus:outline-none sm:mr-2 mb-1"
+                                    type="button"
+                                    style={{ transition: "all .15s ease" }}
+                                    value="Logout"
+                                    onClick={handleLogout}
+                                    >
+                                        Logout
                                 </button>
                             </div>
                         </div>
