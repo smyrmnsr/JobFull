@@ -23,13 +23,13 @@ const DisplayJob = (props)=>{
             
         }
         fetchItems()
-    },[])
+    },[jobId])
 
     const item = singleJob;
     console.log(item)
 
   
-    const languages = item.languages;
+    // const languages = item.languages;
 
     return ( 
         <>
@@ -129,12 +129,12 @@ const DisplayJob = (props)=>{
                             <h2>Ideal Canditate</h2>
                         </div>
                       <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                        <h3>{item.bio}</h3>
+                        {item.bio}
                       </p>
                         <div className="text-gray-800 font-bold">
                             <h4>Job Description</h4>
                       <p className="mb-4 text-lg leading-relaxed text-gray-800">
-                        <h5>{item.description}</h5>
+                        {item.description}
                       </p>
                     </div>
                     

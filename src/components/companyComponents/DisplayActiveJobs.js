@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import {useState} from 'react'
+
 
 
 const DisplayActiveJobs = (job) => {
@@ -31,10 +31,10 @@ const DisplayActiveJobs = (job) => {
         </div>
         <div className='flex flex-wrap flex-col items-center mt-4 mx-4 pt-4 border-t border-gray-500 border-solid sm:ml-auto sm:border-0 sm:pt-0 sm:mt-0'>
           <div className="edit py-4 cursor-pointer">
-            <i class="fas fa-pencil-alt"></i>
+            <i className="fas fa-pencil-alt"></i>
           </div>
           <div className="delete py-2 cursor-pointer">
-            <i class="fas fa-trash-alt" ></i>
+            <i className="fas fa-trash-alt" ></i>
           </div>                 
         </div>
       </div>

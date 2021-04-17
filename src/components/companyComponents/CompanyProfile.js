@@ -1,9 +1,8 @@
-// import data from '../assets/companyDescription.json';
 import {useState, useEffect} from 'react';
 import BASE_URL from "../../BASE_URL";
 import axios from 'axios';
 import LOGO from '../../images/myhome.svg';
-import { Link, NavLink } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const CompanyProfile = (props) => {
     const{ match }= props;
@@ -15,12 +14,11 @@ const CompanyProfile = (props) => {
         const fetchItems = async()=>{
             const response = await axios(BASE_URL + `/companies/${companyId}`)
             const singleCompanyData = response.data;
-            // console.log(response.data);
             setCompany(singleCompanyData);
             
         }
-        fetchItems()
-    },[])
+        fetchItems() 
+    },[companyId])
 
     const item=company;
     

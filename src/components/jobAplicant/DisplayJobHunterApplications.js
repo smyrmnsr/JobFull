@@ -5,7 +5,8 @@ import GetJobsAppliedTo from './GetJobsAppliedTo';
 
 
 const DisplayJobHunterApplications = () => {
-  const [jobId, setjobId] = useState([])
+  // aici trebuie era hardcodat. NU E BINE
+  // const [jobId, setjobId] = useState([])
   const [appliedJob, setAppliedJob] = useState([]);
   
   

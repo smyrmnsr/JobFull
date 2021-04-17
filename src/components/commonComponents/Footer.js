@@ -17,104 +17,78 @@ const Footer = () => {
 					</div>
 					<div>
 					<div 
-						class="font-display text-white uppercase text-sm tracking-widest mb-6">
+						className="font-display text-white uppercase text-sm tracking-widest mb-6">
 							Who We Are
 					</div>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/about-us'} className='hover:underline'>
+				
+						<Link to={'/about-us'} className=''>
 							About us
 						</Link>
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-							Careers
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-							Press
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/contact-us'} className='hover:underline'>
+				
+				
+						<Link to="#" className="block mb-4 hover:underline">Careers</Link>
+				
+					
+						<Link to="#" className="block mb-4 hover:underline">	Press</Link>
+				
+				
+						<Link to={'/contact-us'} className='block mb-4 hover:underline'>
 							Contact Us
 						</Link>
-					</a>
+				
 				</div>
 				<div>
 					<div 
-						class="font-display text-white uppercase text-sm tracking-widest mb-6">
+						className="font-display text-white uppercase text-sm tracking-widest mb-6">
 							Who We Serve
 					</div>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/user-register'} className='hover:underline'>
+				
+						<Link to={'/user-register'} className='block mb-4 hover:underline'>
 							Job Seekers
 						</Link>
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/company-register'} className='hover:underline'>
+				
+					
+						<Link to={'/company-register'} className='block mb-4 hover:underline'>
 							Employers
 						</Link>
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/data'} className='hover:underline'>
+				
+						<Link to={'/data'} className='hover:underline block mb-4'>
 							Data
 						</Link>
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/publisher'} className='hover:underline'>
+				
+				
+						<Link to={'/publisher'} className='hover:underline block mb-4'>
 							Publisher
 						</Link>
-					</a>
+				
 				</div>
 				<div>
 					<div 
-						class="font-display text-white uppercase text-sm tracking-widest mb-6">
+						className="font-display text-white uppercase text-sm tracking-widest mb-6">
 							Helpful Resources
 					</div>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/privacy-policy'} className='hover:underline'>
+				
+						<Link to={'/privacy-policy'} className='hover:underline block mb-4'>
 							Privacy Policy
 						</Link>
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/security-policy'} className='hover:underline'>
+				
+						<Link to={'/security-policy'} className='hover:underline block mb-4'>
 							Security Policy
 						</Link>
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/cookies'} className='hover:underline'>
+				
+			
+						<Link to={'/cookies'} className='hover:underline block mb-4'>
 							Cookie Consent
 						</Link>
-					</a>
-					<a 
-						href="#" 
-						class="block mb-4">
-						<Link to={'/terms-of-use'} className='hover:underline'>
+			
+				
+						<Link to={'/terms-of-use'} className='hover:underline block mb-4'>
 							Terms Of Use
 						</Link>
-					</a>
+				
 				</div>
 			</div>
-			<div class="text-sm lg:text-base text-center font-heading font-semibold tracking-widest uppercase text-white opacity-75 pb-24">
+			<div className="text-sm lg:text-base text-center font-heading font-semibold tracking-widest uppercase text-white opacity-75 pb-24">
 				©2021 design by Rocket Team Inc
 			</div>
 		</div>

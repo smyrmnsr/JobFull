@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import JobBoardComponent from './JobBoardComponent';
 import BASE_URL from '../../BASE_URL';
 import axios from 'axios';
-import Loading from "../../images/Ripple-1s-200px.svg";
+// import Loading from "../../images/Ripple-1s-200px.svg";
 
 const DisplayAllJobs = () => {
 
@@ -21,7 +21,7 @@ const DisplayAllJobs = () => {
     fetchItems()
 },[])
 
-  const foo = jobs
+
 
 
   const filterFunction = ({role, level, tools, languages}) => {
@@ -96,7 +96,7 @@ const DisplayAllJobs = () => {
 							{/* Search Bar */}
 							<form onSubmit={onSubmitForm} method='GET' action='#'>
 								<div className='p-8'>
-									<div class='bg-white flex items-center rounded-full shadow-xl'>
+									<div className='bg-white flex items-center rounded-full shadow-xl'>
 										<input
 											className='rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none'
 											id='search'
@@ -142,21 +142,21 @@ const DisplayAllJobs = () => {
 
 							{jobs.length === 0 ? (
 								<>
-									<div class='fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden  opacity-75 flex flex-col items-center justify-center'>
-										<div class='loader ease-linear rounded-full border-4 border-t-4  h-12 w-12 mb-4'></div>
-										<h2 class='text-center text-purple text-xl font-semibold'>
+									<div className='fixed top-0 left-0 right-0 bottom-0 w-full h-screen z-50 overflow-hidden  opacity-75 flex flex-col items-center justify-center'>
+										<div className='loader ease-linear rounded-full border-4 border-t-4  h-12 w-12 mb-4'></div>
+										<h2 className='text-center text-purple text-xl font-semibold'>
 											Loading...
 										</h2>
-										<p class='w-1/3 text-center text-black'>
+										<p className='w-1/3 text-center text-black'>
 											This may take a few seconds, please don't close this page.
 										</p>
 									</div>
 								</>
 							) : (
-								filteredJobs.map((job) => (
+								filteredJobs.map((job,index) => (
 									<JobBoardComponent
 										job={job}
-										key={job.id}
+										key={index}
 										handleTagClick={handleTagClick}
 									/>
 								))

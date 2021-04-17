@@ -1,4 +1,3 @@
-import CvHeader from './CvHeader';
 import Profile from './Profile';
 
 

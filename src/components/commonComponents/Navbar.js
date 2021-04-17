@@ -25,7 +25,7 @@ const Navbar = () => {
                     
             </div>
         </div>
-        <div class="elfsight-app-63e2e0a1-cf27-4e91-b969-22043d78f1b7"></div>
+        <div className="elfsight-app-63e2e0a1-cf27-4e91-b969-22043d78f1b7"></div>
     </nav>
 
 

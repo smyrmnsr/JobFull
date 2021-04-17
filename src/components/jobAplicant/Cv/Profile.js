@@ -2,7 +2,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import BASE_URL from "../../../BASE_URL";
-import profilePic from '../../../images/profile-pic.png';
+// import profilePic from '../../../images/profile-pic.png';
 import { Link } from 'react-router-dom';
 
 const Profile = (props) => {
@@ -24,7 +24,7 @@ const Profile = (props) => {
     },[])
 
 
-    console.log(aplicantData)
+
 
     return ( 
         <>
@@ -150,7 +150,7 @@ const Profile = (props) => {
                         <div className="flex  justify-between ">
                     
                             <div className="">
-                                <h1 className="text-gray-700 text-lg font-semibold"><i class="fas fa-graduation-cap"></i>Education</h1>
+                                <h1 className="text-gray-700 text-lg font-semibold"><i className="fas fa-graduation-cap"></i>Education</h1>
                                 <h3 className="mx-12 text-lg text-xl font-semibold">Computer Science</h3>
                                 <h3 className="mx-12 text-gray-700">Politehnica </h3>
                                 <h3 className="mx-12 text-gray-700">Bucuresti</h3>
@@ -166,7 +166,7 @@ const Profile = (props) => {
                     <div className="flex my-6 justify-between ">
                         <div>
                             {/* aici mapez */}
-                            <h1 className="text-gray-700 text-lg font-semibold"><i class="fas fa-user-tie"></i>Professional Experiance</h1>
+                            <h1 className="text-gray-700 text-lg font-semibold"><i className="fas fa-user-tie"></i>Professional Experiance</h1>
                             <h3 className='mx-12 text-lg text-xl font-semibold'>Senior Developer</h3>
                             <h3 className="mx-12 text-gray-700">Apple</h3>
                         </div>
@@ -179,7 +179,7 @@ const Profile = (props) => {
                     </div>
                         <div className="flex my-6 justify-left">                
                             <div>
-                                <h1 className="mx-12 text-gray-700 text-lg font-semibold"><i class="fas fa-language"></i>Foreign Langauges </h1>
+                                <h1 className="mx-12 text-gray-700 text-lg font-semibold"><i className="fas fa-language"></i>Foreign Langauges </h1>
                                 <h4 className='text-lg text-xl font-semibold'>English</h4>
                             </div>
                         </div> 

@@ -2,6 +2,7 @@ import  axios  from "axios";
 import Base_URL from '../BASE_URL';
 
 
+
 const registerPartI = ( email, password,dateOfBirth,role,contactNumber,city)=>{
     return axios.post(Base_URL+"/registration/signup",{
       
@@ -47,7 +48,7 @@ const getCurrentUser=()=>{
     return JSON.parse(localStorage.getItem("user"));
 }
 
-export default{
+export default {
     registerPartI,
     registerPartII,
     login,

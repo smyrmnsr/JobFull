@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import BASE_URL from '../../BASE_URL';
 import axios from 'axios';
 import CompanySubMenu from './CompanySubMenu';
 
 
 function createPostedDate() {
-	let d = new Date();
-	let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
-	let month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d);
-	let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+	// let d = new Date();
+	// let year = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+	// let month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(d);
+	// let day = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
 }
 
 createPostedDate();
 
-const createList = (string) => {};
+// const createList = (string) => {};
 
 class CreateJob extends Component {
 	constructor(props) {
@@ -28,7 +27,7 @@ class CreateJob extends Component {
 		const formData = new FormData(e.target);
 		const body = {};
 
-		const languagesAsList = formData.get('languages').split(/[\s,]+/);
+		// const languagesAsList = formData.get('languages').split(/[\s,]+/);
 
 		formData.forEach((value, property) => (body[property] = value));
 		console.log(body);
@@ -185,13 +184,13 @@ class CreateJob extends Component {
 									<div className='mb-4'>
 										<div>
 											<label 
-												class='block text-sm font-medium text-gray-700' 
-												for='bio'>
+												className='block text-sm font-medium text-gray-700' 
+												htmlFor='bio'>
 												Ideal Candidate
 											</label>
 											<textarea
 												name='bio'
-												class=' w-full border border-gray-300 rounded-sm px-4 py-3 h-22 outline-none transition-colors duration-150 ease-in-out focus:border-blue-400 resize-none'
+												className=' w-full border border-gray-300 rounded-sm px-4 py-3 h-22 outline-none transition-colors duration-150 ease-in-out focus:border-blue-400 resize-none'
 												placeholder=''
 											></textarea>
 										</div>
@@ -199,13 +198,13 @@ class CreateJob extends Component {
 									<div className='mb-4'>
 										<div>
 											<label 
-												class='block text-sm font-medium text-gray-700' 
-												for='bio'>
+												className='block text-sm font-medium text-gray-700' 
+												htmlFor='bio'>
 												Job Description
 											</label>
 											<textarea
 												name='description'
-												class=' w-full border border-gray-300 rounded-sm px-4 py-3 h-22 outline-none transition-colors duration-150 ease-in-out focus:border-blue-400 resize-none'
+												className=' w-full border border-gray-300 rounded-sm px-4 py-3 h-22 outline-none transition-colors duration-150 ease-in-out focus:border-blue-400 resize-none'
 												placeholder=''
 											></textarea>
 										</div>
