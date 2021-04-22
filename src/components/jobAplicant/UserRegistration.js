@@ -12,8 +12,10 @@ const UserRegistration = () => {
     const [password, setPassword] = useState("");
     const [city, setCity] = useState("");
     const [contactNumber, setPhoneNumber] = useState("");
-    // const [dateOfBirth, setDetOfBirth] = useState("");
+    const [dateOfBirth, setDateOfBirth] = useState("");
     const [role, setRole] = useState("USER");
+    const [userModelId, setUserModelId] = useState("");
+    const [enabled, setEnablet] = useState("false");
 
 
     const onChangeFirstName = (e) => {
@@ -49,34 +51,91 @@ const UserRegistration = () => {
         setPhoneNumber(contactNumber);
       };
 
+    const onChangeBirthDate = (e)=>{
+        const dateOfBirth = e.target.value;
+        setDateOfBirth(dateOfBirth);
+        
+    }
 
-    console.log(firstName)
 
-    const handleRegister=(e)=>{
+   
+// varianta cu doua posturi unu dupa altul
+
+    const handleRegister= (e)=>{
         e.preventDefault()
 
-
-            axios.all([
-            axios.post("http://localhost:8080/api/v1/registration/signup",{
-                    email,
-                    password,
-                contactNumber,
-                city,
-                role
-                
-
-            }),
+        axios.post("http://localhost:8080/api/v1/registration/signup",{
+            email,
+            password,
+            contactNumber,
+            city,
+            role,
+            dateOfBirth,
+        
+       
+        })
+        .then(res=> {setUserModelId(res.data);
+            console.log(userModelId)
             axios.post("http://localhost:8080/api/v1/jobhunter",{
                 firstName,
+                userModelId,
                 lastName,
-
-            }),
-            ])
-            .then(axios.spread((req1, req2) => {
-                // output of req.
-                console.log(req1, req2)
-            }));
+               })})  
     }
+
+
+// varianta dubioasa care merge doar cu cascade din back si trimisa direct pe jobhunter, uitate in cosola din front la rezultate
+
+    // const handleRegister= (e)=>{
+    //     e.preventDefault()
+
+    //     axios.post("http://localhost:8080/api/v1/jobhunter",{
+    //                     firstName,
+    //                     lastName,
+    //                     email,
+    //                     password,
+    //                     contactNumber,
+    //                     city,
+    //                     role,
+    //                     dateOfBirth}).then(res=> console.log(res))
+    // }
+
+
+
+// varianta cu doua posturi in acelasi timp, rezultate urate cand e cascade on,  
+
+    // const handleRegister=(e)=>{
+    //     e.preventDefault()
+
+
+    //         axios.all([
+           
+    //         axios.post("http://localhost:8080/api/v1/jobhunter",{
+    //             firstName,
+    //             lastName,
+
+    //         }),
+    //         axios.post("http://localhost:8080/api/v1/registration/signup",{
+                   
+    //             password,
+    //             email,
+    //             contactNumber,
+    //             city,
+    //             role,
+    //             dateOfBirth,
+       
+            
+
+    //     }),
+    //         ])
+    //         .then(axios.spread((req1, req2) => {
+    //             // output of req.
+    //             console.log(req1, req2)
+    //         }));
+    // }
+
+
+
 
 
 
@@ -148,6 +207,11 @@ const UserRegistration = () => {
                                         placeholder="Phone Number"
                                         onChange={onChangePhoneNumber}
                                     />
+                                </div>
+                                <div className="flex mb-3 mx-auto p-3 mx-2 bg-gray-50 rounded">
+                                    <label className="text-gray-400  mx-6" htmlFor="bday">Enter your birthday:</label>
+                                    <input  className="mx-6"  type="date" name="bday" required pattern="\d{4}-\d{2}-\d{2}" onChange={onChangeBirthDate}/>
+                                    
                                 </div>
                                 </div>
                                 <div className="mb-3 flex p-4 mx-2 bg-gray-50 rounded">
