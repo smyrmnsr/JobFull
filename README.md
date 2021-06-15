@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# JobFull
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> <h1 align="center">JobFull Job Portal</h1>
 
-## Available Scripts
+> Jobfull is a website where the users can create an account and sign in as a company or a canditate to either add a new job and find new applicants for his company or find jobs and apply to a variety of jobs posted by the companies. The project is developed with Spring Boot (Controller, Repository, Service, Model) and secured with Spring Security using a JWT Token for accessing authentification requests.The frontend is developed with React. 
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![jobfull](https://github.com/smyrmnsr/JobFull/blob/applicants-page/jobfull.gif)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Setup/Installation Requirements
 
-### `npm test`
+Install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
 
-### `npm run build`
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+npm run start
 
-### `npm run eject`
+```
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+FRONTEND
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![REACT](https://img.shields.io/badge/REACT-black?style=flat&logo=react&logoColor=cyan)
+![JAVASCRIPT](https://img.shields.io/badge/-JAVASCRIPT-black?style=flat&logo=javascript)
+![CSS3](https://img.shields.io/badge/-CSS3-black?style=flat&logo=css3)
+![HTML5](https://img.shields.io/badge/-HTML5-black?style=flat&logo=html5&logoColor=red)
+![TAILWINDCSS](https://img.shields.io/badge/TAILWIND_CSS-black?style=flat&logo=tailwind-css&logoColor=cyan)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+BACKEND
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![NODE.JS](https://img.shields.io/badge/NODE.JS-black?style=flat&logo=node-dot-js&logoColor=green)
+![POSTGRESQL](https://img.shields.io/badge/POSTGRESQL-black?style=flat&logo=postgresql&logoColor=blue)
+![JAVA](https://img.shields.io/badge/JAVA-black?style=flat&logo=java&logoColor=orange)
 
-## Learn More
+The project focused on creating client side and server side. This project also used express for building the server API and postresql database to store the collections and documents containing the data from the users.
+The backend part consist in Spring Boot, Spring Security with JWT Token and Hibernate.
+The frontend was made with React and stylized with Tailwind CSS framework.
+## Author
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Samir Mansour**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Github: [@smyrmnsr](https://github.com/smyrmnsr)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
