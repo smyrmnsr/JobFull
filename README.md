@@ -39,6 +39,8 @@ BACKEND
 ![NODE.JS](https://img.shields.io/badge/NODE.JS-black?style=flat&logo=node-dot-js&logoColor=green)
 ![POSTGRESQL](https://img.shields.io/badge/POSTGRESQL-black?style=flat&logo=postgresql&logoColor=blue)
 ![JAVA](https://img.shields.io/badge/JAVA-black?style=flat&logo=java&logoColor=orange)
+![HIBERNATE](https://img.shields.io/badge/HIBERNATE-black?style=flat&logo=Symfony&logoColor=brown)
+![SPRING](https://img.shields.io/badge/SPRING-black?style=flat&logo=Symfony&logoColor=green)
 
 The project focused on creating client side and server side. This project also used express for building the server API and postresql database to store the collections and documents containing the data from the users.
 The backend part consist in Spring Boot, Spring Security with JWT Token and Hibernate.
