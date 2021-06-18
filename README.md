@@ -1,4 +1,3 @@
-# JobFull
 
 > <h1 align="center">JobFull Job Portal</h1>
 
