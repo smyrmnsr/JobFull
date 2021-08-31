@@ -30,10 +30,7 @@
 
 4. **Run the app**
 
-   You can run the spring boot app by typing the following command -
-
-   ```run backend app in your IDE (all the dependencies are in the pom.xml)
-   ```
+   You can run backend app in your IDE (all the dependencies are in the pom.xml) 
 
    The server will start on port 5000.
    
