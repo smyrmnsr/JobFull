@@ -1,5 +1,5 @@
 
-> <h1 align="center">JobFull Job Portal</h1>
+## JobFull 
 
 > Jobfull is a website where the users can create an account and sign in as a company or a canditate to either add a new job and find new applicants for his company or find jobs and apply to a variety of jobs posted by the companies. The project is developed with Spring Boot (Controller, Repository, Service, Model) and secured with Spring Security using a JWT Token for accessing authentification requests.The frontend is developed with React. 
 
@@ -7,22 +7,55 @@
 
 ![jobfull](https://github.com/smyrmnsr/JobFull/blob/applicants-page/jobfull.gif)
 
-## Setup/Installation Requirements
+## Steps to Setup the Spring Boot Back end app (jobfull-backend)
 
-Install
+1. **Clone the application**
 
-```sh
+   ```bash
+   git clone https://github.com/smyrmnsr/jobfull-backend
+   cd jobfull-backend
+   ```
+   
+2. **Database is stored on Heroku. If you want to create your own with PostgreSQL:**
 
-npm install
+   ```bash
+   create database jobfull
+   ```
+   
+3. **Change PostgreSQL username and password as per your PostgreSQL installation**
 
-```
-Usage
+   - open `src/main/resources/application.properties` file.
 
-```sh
+   - change `spring.datasource.username` and `spring.datasource.password` properties as per your postgresql installation
 
-npm run start
+4. **Run the app**
 
-```
+   You can run the spring boot app by typing the following command -
+
+   ```run backend app in your IDE (all the dependencies are in the pom.xml)
+   ```
+
+   The server will start on port 5000.
+   
+   
+## Steps to Setup the React Front end app (jobfull)
+
+1. **Clone the application**
+
+   ```bash
+   git clone https://github.com/smyrmnsr/jobfull
+   cd jobfull
+   ```
+
+2. **Then type the following command to install the dependencies and start the application** - 
+   
+   ```bash
+    npm install && npm start
+   ```
+   
+   The front-end server will start on port `3000`.
+
+
 ## Technologies Used
 
 FRONTEND
